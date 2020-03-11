@@ -1,0 +1,177 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Profit And Loss</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:Label ID="lbl_cmpny" Text="Company :" runat="server"></asp:Label>
+                    </td>
+                   <td>
+                        <asp:DropDownList ID="ddlCompanyLsit" CssClass="input_text" runat="server">
+                                                                        <asp:ListItem Value="34">Awards Depot 34</asp:ListItem>
+                                                                        <asp:ListItem Value="50">Trophies Today 50</asp:ListItem>
+                                                                        <asp:ListItem Value="70">Us Award Supply 70</asp:ListItem>
+                                                                        <asp:ListItem Value="75">Inst-Awards 75</asp:ListItem>
+                                                                        <asp:ListItem Value="76">China Awards & Gifts 76</asp:ListItem>
+                                                                        <asp:ListItem Value="80">Trophies Today Africa 80</asp:ListItem>
+                                                                        <asp:ListItem Value="35">Iconic Trophies 35</asp:ListItem>   <%--Add Iconic Trophies in DcLogin ListItem--%>
+                                                                        <asp:ListItem Value="40">School Awards 40</asp:ListItem>    <%--Add School Awards in DcLogin ListItem--%>
+                                                                        <asp:ListItem Value="68">Freemancma 68</asp:ListItem>    <%--Add School Awards in Freemancma ListItem--%>
+                                                                        <asp:ListItem Value="33">Trophy Deals 33</asp:ListItem>
+                                                                    </asp:DropDownList>
+                                                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtusername"
+                                                                        ValidationGroup="vs" ErrorMessage="Enter user name">*</asp:RequiredFieldValidator>
+                       </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lbl_qb" runat="server" Text="QB_Sync :"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddl_qb" runat="server">
+                            <asp:ListItem Value="Yes" Text="Yes"></asp:ListItem>
+                            <asp:ListItem Value="No" Text="No"></asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label Text="Debit Details" runat="server" ID="lbl_dbt"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <dx:ASPxGridView ID="GridDebit" runat="server" AutoGenerateColumns="False" Font-Names="Verdana"
+                        KeyFieldName="DebitAcc" Visible="false" ClientInstanceName="grid" Font-Size="12px" Width="100%"
+                        CssFilePath="~/App_Themes/Office2010Silver/{0}/styles.css"
+                        CssPostfix="Office2010Silver" OnRowDeleting="GridVendor_RowDeleting">
+                        <Columns>
+                            <%--<dx:GridViewDataHyperLinkColumn FieldName="worker" Caption=" " VisibleIndex="0">
+                                <Settings AllowAutoFilter="False" />
+                                <PropertiesHyperLinkEdit NavigateUrlFormatString="Worker.aspx?id={0}" ImageUrl="../images/icon-edit.gif">
+                                </PropertiesHyperLinkEdit>
+                            </dx:GridViewDataHyperLinkColumn>--%>
+                            <dx:GridViewDataColumn FieldName="DebitAcc" Caption="Debit Account" VisibleIndex="1">
+                            </dx:GridViewDataColumn>
+                            <dx:GridViewDataColumn FieldName="Account" Caption="Account Name" VisibleIndex="2">
+                            </dx:GridViewDataColumn>
+                            <dx:GridViewDataColumn FieldName="DebitAmount" Caption="Debit Amount" VisibleIndex="3">
+                            </dx:GridViewDataColumn>
+                           <%-- <dx:GridViewCommandColumn ButtonType="Image" Caption=" " Name="deletecol"
+                                ShowInCustomizationForm="True" VisibleIndex="9" Width="30px">
+                                <DeleteButton Visible="True">
+                                    <Image Url="~/images/icon-delete.gif">
+                                    </Image>
+                                </DeleteButton>
+                                <ClearFilterButton Visible="true">
+                                    <Image Url="~/images/clear.png">
+                                    </Image>
+                                </ClearFilterButton>
+                            </dx:GridViewCommandColumn>--%>
+                        </Columns>
+                        <SettingsPager PageSize="30">
+                        </SettingsPager>
+                        <Settings ShowFilterRow="True" />
+                        <SettingsBehavior ConfirmDelete="True" />
+                        <SettingsEditing Mode="PopupEditForm" PopupEditFormModal="true" PopupEditFormHorizontalAlign="WindowCenter"
+                            PopupEditFormAllowResize="True" PopupEditFormWidth="500px" EditFormColumnCount="1" />
+                        <SettingsText ConfirmDelete="Are you sure want to delete this case?" PopupEditFormCaption="case" />
+                        <Images SpriteCssFilePath="~/App_Themes/Office2010Silver/{0}/sprite.css">
+                            <LoadingPanelOnStatusBar Url="~/App_Themes/Office2010Silver/GridView/Loading.gif">
+                            </LoadingPanelOnStatusBar>
+                            <LoadingPanel Url="~/App_Themes/Office2010Silver/GridView/Loading.gif">
+                            </LoadingPanel>
+                        </Images>
+                        <ImagesFilterControl>
+                            <LoadingPanel Url="~/App_Themes/Office2010Silver/GridView/Loading.gif">
+                            </LoadingPanel>
+                        </ImagesFilterControl>
+                        <Styles CssFilePath="~/App_Themes/Office2010Silver/{0}/styles.css" CssPostfix="Office2010Silver">
+                            <Header ImageSpacing="5px" HorizontalAlign="Center" SortingImageSpacing="5px" Font-Bold="True" Font-Size="13px">
+                            </Header>
+                            <LoadingPanel ImageSpacing="5px">
+                            </LoadingPanel>
+                        </Styles>
+                        <StylesEditors ButtonEditCellSpacing="0">
+                            <ProgressBar Height="21px">
+                            </ProgressBar>
+                        </StylesEditors>
+                    </dx:ASPxGridView>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label Text="Credit Details" runat="server" ID="lbl_cre"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                     <dx:ASPxGridView ID="GridCredit" runat="server" AutoGenerateColumns="False" Font-Names="Verdana"
+                        KeyFieldName="DebitAcc" Visible="false" ClientInstanceName="grid" Font-Size="12px" Width="100%"
+                        CssFilePath="~/App_Themes/Office2010Silver/{0}/styles.css"
+                        CssPostfix="Office2010Silver" OnRowDeleting="GridVendor_RowDeleting">
+                        <Columns>
+                            <%--<dx:GridViewDataHyperLinkColumn FieldName="worker" Caption=" " VisibleIndex="0">
+                                <Settings AllowAutoFilter="False" />
+                                <PropertiesHyperLinkEdit NavigateUrlFormatString="Worker.aspx?id={0}" ImageUrl="../images/icon-edit.gif">
+                                </PropertiesHyperLinkEdit>
+                            </dx:GridViewDataHyperLinkColumn>--%>
+                            <dx:GridViewDataColumn FieldName="CreditAcc" Caption="Credit Account" VisibleIndex="1">
+                            </dx:GridViewDataColumn>
+                            <dx:GridViewDataColumn FieldName="Account" Caption="Account Name" VisibleIndex="2">
+                            </dx:GridViewDataColumn>
+                            <dx:GridViewDataColumn FieldName="CreditAmount" Caption="Credit Amount" VisibleIndex="3">
+                            </dx:GridViewDataColumn>
+                           <%-- <dx:GridViewCommandColumn ButtonType="Image" Caption=" " Name="deletecol"
+                                ShowInCustomizationForm="True" VisibleIndex="9" Width="30px">
+                                <DeleteButton Visible="True">
+                                    <Image Url="~/images/icon-delete.gif">
+                                    </Image>
+                                </DeleteButton>
+                                <ClearFilterButton Visible="true">
+                                    <Image Url="~/images/clear.png">
+                                    </Image>
+                                </ClearFilterButton>
+                            </dx:GridViewCommandColumn>--%>
+                        </Columns>
+                        <SettingsPager PageSize="30">
+                        </SettingsPager>
+                        <Settings ShowFilterRow="True" />
+                        <SettingsBehavior ConfirmDelete="True" />
+                        <SettingsEditing Mode="PopupEditForm" PopupEditFormModal="true" PopupEditFormHorizontalAlign="WindowCenter"
+                            PopupEditFormAllowResize="True" PopupEditFormWidth="500px" EditFormColumnCount="1" />
+                        <SettingsText ConfirmDelete="Are you sure want to delete this case?" PopupEditFormCaption="case" />
+                        <Images SpriteCssFilePath="~/App_Themes/Office2010Silver/{0}/sprite.css">
+                            <LoadingPanelOnStatusBar Url="~/App_Themes/Office2010Silver/GridView/Loading.gif">
+                            </LoadingPanelOnStatusBar>
+                            <LoadingPanel Url="~/App_Themes/Office2010Silver/GridView/Loading.gif">
+                            </LoadingPanel>
+                        </Images>
+                        <ImagesFilterControl>
+                            <LoadingPanel Url="~/App_Themes/Office2010Silver/GridView/Loading.gif">
+                            </LoadingPanel>
+                        </ImagesFilterControl>
+                        <Styles CssFilePath="~/App_Themes/Office2010Silver/{0}/styles.css" CssPostfix="Office2010Silver">
+                            <Header ImageSpacing="5px" HorizontalAlign="Center" SortingImageSpacing="5px" Font-Bold="True" Font-Size="13px">
+                            </Header>
+                            <LoadingPanel ImageSpacing="5px">
+                            </LoadingPanel>
+                        </Styles>
+                        <StylesEditors ButtonEditCellSpacing="0">
+                            <ProgressBar Height="21px">
+                            </ProgressBar>
+                        </StylesEditors>
+                    </dx:ASPxGridView>
+                 </td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>

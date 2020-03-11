@@ -1,0 +1,1258 @@
+﻿@model TransCanada.Models.AspNetAccountsModel
+
+@{
+    ViewBag.Title = "Update Company";
+    Layout = "~/Views/Shared/MultiSelect_Layout.cshtml";
+}
+<br />
+<style>
+  
+    .hidden-div-custom{
+        display:block !important;
+    }
+    textarea {
+    overflow: auto;
+    vertical-align: top;
+    width: 65%;
+    height:60px;
+}
+    .eye-icon {
+        font-size: 25px;
+    }
+    .custom-scroll-y
+    {
+        min-height: auto;
+        max-height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .dyanmic-float-right
+{
+	margin-bottom:10px;
+}
+.dynamic-form-scroll
+{
+display: inline-block;
+width: 100%;
+min-height: auto;
+max-height: 300px;
+overflow-x: hidden;
+overflow-y: auto;
+margin: 0px 0px;
+}
+.dynamic-form-scroll div
+{
+	padding:0px;
+	margin: 15px 0px 0px 0px;
+	display:table;
+	width:100%;
+}
+.dynamic-form-scroll div input
+{
+width: 90%;
+border: 1px solid #ccc;
+padding: 8px;
+float: left;
+max-width: 100%;
+}
+.dynamic-form-scroll div button
+{
+	float: right;
+	width: 8%;
+}
+.dynamictext
+{
+    width:100%;
+}
+.modal-body1{
+    padding:20px;
+}
+#demo_p
+{
+      
+    width: 100%;
+    background: #eaeaea;
+    margin: 25px 0px 0px;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #4a4a4a;
+    font-size:13px;
+}
+</style>
+@Html.Raw(MvcBreadCrumbs.BreadCrumb.Display())
+@if (@Session["Account_idPK"] != null)
+{
+    <div style="float:right" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/Dashboard/Index">Home</a>|
+            <a class="nav-item nav-link" href="/ClientLab/ClientLabSP/@Session["Account_idPK"]">Assign Lab&SP</a>|
+            <a class="nav-item nav-link" href="/Location/Locations/@Session["Account_id"]">Locations and Contacts</a>
+
+        </div>
+    </div>
+}
+<h2>Update Client</h2>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .btn-primary {
+            color: #fff;
+            background-color: #428bca;
+            border-color: #357ebd;
+            float: right;
+            margin-right: 100px;
+            /* align-content: center; */
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 15px;
+        }
+
+        .row {
+            background-color: white;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .AddContact-header {
+            background-color: white;
+        }
+
+        @@media only screen and (max-width: 768px) {
+            .column {
+                float: unset;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<style>
+    .Title {
+        text-align: center;
+        color: black;
+    }
+
+
+
+
+
+    .centre {
+        text-align: center;
+        float: left;
+        width: 0%;
+        padding: 15px;
+        width: 250px;
+        height: 15px;
+    }
+
+    .form-group {
+        color: black;
+    }
+
+    /*.right {
+            text-align: right;
+            color: red;
+            font: bold;
+        }*/
+
+    .modal-dialog {
+        height: 300px;
+        width: 850px;
+    }
+
+    .modal-header {
+        background-color: white;
+        padding: 30px 30px;
+        color: #FFF;
+        border-bottom: inset;
+    }
+</style>
+<div>
+    @Html.ActionLink("Back to List", "AccountsList")
+</div>
+@using (Html.BeginForm("UpdateAccounts", "Asp_Accounts", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <button type="button" class="btn btn-primary newcall" data-toggle="modal" data-target="#ContactModal">
+        Add Contact
+    </button>
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.AccountId_PK, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AccountId_PK, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AccountId_PK, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+        @Html.HiddenFor(m => m.Logoimage_src)
+        @Html.HiddenFor(m => m.AccountId_PK)
+        @Html.HiddenFor(m => m.LogoImage)
+        <div class="column">
+            <div class="form-group">
+                <b class="control-label col-md-2">@Html.DisplayName("Client Name")</b>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.AccountId, new { @class = "form-control", @readonly = "readonly" })
+                    @Html.ValidationMessageFor(model => model.AccountId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Related_To, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Related_To, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Related_To, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Short_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Short_Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Short_Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address2, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Address2, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Address2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.State, TransCanadaDemo.Controllers.ClientController.ListClientState(), "--SELECT--", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Zip, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Zip, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Zip, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Notes_1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Notes_1, new { htmlAttributes = new { @class = "form-control" } })
+                    <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                    @Html.ValidationMessageFor(model => model.Notes_1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Category_1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Category_1, TransCanada.Controllers.StaticValuesController.ListCategoryType(), new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Category_1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.DropDownListFor(model => model.Category, TransCanadaDemo.Controllers.ClientController.ListCategory(), "--SELECT--", new { @class = "form-control" })*@
+                    @Html.ListBoxFor(m => m.Category, TransCanadaDemo.Controllers.ClientController.ListCategory(), new { @class = "listbox" })
+                    @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
+                    @*<div id="check">
+                            <table>
+                                @for (int i = 0; i < Model.CheckBoxes.Count; i++)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.CheckBoxFor(m => m.CheckBoxes[i].Selected)
+                                            @Html.HiddenFor(m => m.CheckBoxes[i].Text)
+                                            @Html.HiddenFor(m => m.CheckBoxes[i].Selected)
+                                            <span>@Model.CheckBoxes[i].Text</span>
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>*@
+                </div>
+            </div>
+            <div class="form-group">
+                @*@Html.LabelFor(model => model.TPA_Category, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                <label class="control-label col-md-2">Client Type</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.TPA_Category, TransCanada.Controllers.StaticValuesController.ListTPACategory(), new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.TPA_Category, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div id="Text" class="form-group">
+                <label class="control-label col-md-2">TPA Client</label>
+                @*@Html.LabelFor(model => model.TPA_Client, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.TPA_Client, TransCanada.Controllers.StaticValuesController.getTpa(), new { @class = "form-control" })
+                    @*@Html.EditorFor(model => model.TPA_Client, new { htmlAttributes = new { @class = "form-control" } })*@
+                    @Html.ValidationMessageFor(model => model.TPA_Client, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            @*<div class="form-group">
+                    @Html.LabelFor(model => model.TPA_Category, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.TPA_Category, TransCanada.Controllers.StaticValuesController.ListTPACategory(), new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TPA_Category, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div id="Text" class="form-group">
+                    @Html.LabelFor(model => model.TPA_Client, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        @Html.EditorFor(model => model.TPA_Client, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TPA_Client, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Isactive, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Isactive, TransCanadaDemo.Controllers.ClientController.ListActive(), "--SELECT--", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Isactive, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LogoImage, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+
+                    @Html.TextBox("file", "", new { type = "file", @onchange = "document.getElementById('LogoImage').src = window.URL.createObjectURL(this.files[0])", accept = "image/*" })
+                    <img id="LogoImage" style="width:20%; margin-top:10px;" />
+                </div>
+            </div>
+            @*<div class="form-group">
+                    @Html.LabelFor(model => model.CreatedBy, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CreatedBy, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CreatedBy, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CreatedDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CreatedDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UpdatedBy, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UpdatedBy, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UpdatedBy, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UpdatedDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UpdatedDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UpdatedDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+            <div class="form-group">
+                @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                </div>
+            </div> <div class="form-group">
+                @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", @type="number" } })
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                </div>
+            </div> <div class="form-group">
+                @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Fax, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Fax, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Fax, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address_type, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Address_type, TransCanada.Controllers.StaticValuesController.ListAddressType(), new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Address_type, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address_Notes, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Address_Notes, new { htmlAttributes = new { @class = "form-control" } })
+                    <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                    @Html.ValidationMessageFor(model => model.Address_Notes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.ListBoxFor(m => m.Title1, TransCanada.Controllers.TempController.Title(), new { @class = "listbox" })
+                    @*@Html.DropDownListFor(model => model.Title1, TransCanada.Controllers.StaticValuesController.ListTitle(), new { @class = "form-control" })*@
+                    @Html.ValidationMessageFor(model => model.Title1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.function_1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.ListBoxFor(m => m.function_1, TransCanada.Controllers.TempController.Function(), new { @class = "listbox" })
+                    @*@Html.DropDownListFor(model => model.function_1, TransCanada.Controllers.StaticValuesController.ListFunction(), new { @class = "form-control" })*@
+                    @Html.ValidationMessageFor(model => model.function_1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Phone_Number_type, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+
+                                @Html.RadioButtonFor(m => m.Phone_Number_type, "1") Main Line
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.RadioButtonFor(m => m.Phone_Number_type, "2") Direct
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.RadioButtonFor(m => m.Phone_Number_type, "3") Cell Phone
+                            </td>
+                        </tr>
+
+                    </table>
+                    @Html.ValidationMessageFor(model => model.Phone_Number_type, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Notes, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+                    <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                    @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.POCT_Testing, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+
+                                &nbsp; &nbsp;  @Html.RadioButtonFor(m => m.POCT_Testing, "1") Yes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.POCT_Testing, "0") No
+                            </td>
+                        </tr>
+
+                    </table>
+                    @Html.ValidationMessageFor(model => model.POCT_Testing, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div id="Poct" class="form-group">
+                @Html.LabelFor(model => model.POCT_Testing_Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.POCT_Testing_Details, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.POCT_Testing_Details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Self_Collect, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @for (int i = 0; i < Model.self_collect_list.Count; i++)
+                    {
+                        @Html.CheckBoxFor(m => Model.self_collect_list[i].IsChecked)
+                        @Model.self_collect_list[i].Text
+                        @Html.HiddenFor(m => Model.self_collect_list[i].Value)
+                        @Html.HiddenFor(m => Model.self_collect_list[i].Text)<br />
+                    }
+                    @Html.ValidationMessageFor(model => model.Self_Collect, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div id="self" class="form-group">
+                @Html.LabelFor(model => model.Self_Collect_Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Self_Collect_Details, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Self_Collect_Details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Clearing_House, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Clearing_House, "1") Yes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp; &nbsp;   @Html.RadioButtonFor(m => m.Clearing_House, "0") No
+                            </td>
+                        </tr>
+
+                    </table>
+                    @Html.ValidationMessageFor(model => model.Clearing_House, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+
+            <div id="House" class="form-group">
+                @Html.LabelFor(model => model.Clearing_House_Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Clearing_House_Details, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Clearing_House_Details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Compliance_Support, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Compliance_Support, "1") Yes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Compliance_Support, "0") No
+                            </td>
+                        </tr>
+
+                    </table>
+                    @Html.ValidationMessageFor(model => model.Compliance_Support, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+
+            <div id="support" class="form-group">
+                @Html.LabelFor(model => model.Compliance_Support_Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Compliance_Support_Details, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Compliance_Support_Details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Full_time, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Full_time, "1") Yes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Full_time, "0") No
+                            </td>
+                        </tr>
+
+                    </table>
+                    @Html.ValidationMessageFor(model => model.Full_time, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Background_Checks, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Background_Checks, "1") Yes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Background_Checks, "0") No
+                            </td>
+                        </tr>
+
+                    </table>
+                    @Html.ValidationMessageFor(model => model.Background_Checks, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div id="Back" class="form-group">
+                @Html.LabelFor(model => model.Background_Checks_Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Background_Checks_Details, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Background_Checks_Details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Pool, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+                                &nbsp; &nbsp;  @Html.RadioButtonFor(m => m.Pool, "1") Yes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Pool, "0")  No
+                            </td>
+                        </tr>
+
+                    </table>
+                    @Html.ValidationMessageFor(model => model.Pool, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div id="Pool1" class="form-group">
+                @Html.LabelFor(model => model.Pool_Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Pool_Details, new { htmlAttributes = new { @class = "form-control" } })
+                    <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                    @Html.ValidationMessageFor(model => model.Pool_Details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Reporting, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @*@Html.DropDownListFor(model => model.Reporting, TransCanada.Controllers.StaticValuesController.ListReporting(), new { @class = "form-control" })*@
+                    @Html.ListBoxFor(m => m.Reporting, TransCanada.Controllers.StaticValuesController.ListReporting(), new { @class = "listbox" })
+                    @Html.ValidationMessageFor(model => model.Reporting, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Billing_Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.ListBoxFor(model => model.Billing_Details, TransCanada.Controllers.StaticValuesController.ListBillingDetails(), new { @class = "listbox12" })
+                    <i class="fa fa-plus btn btn-success" data-toggle="modal" aria-hidden="true" id="emailadd" data-target="#myModal1"></i>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal1" role="dialog">
+                        <div class="modal-dialog" style="margin-top:12%;">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Add Email</h4>
+                                </div>
+                                <div class="modal-body1">
+                                    <button id="btnAdd" type="button" class="dyanmic-float-right btn btn-success"> <i class="fa fa-plus" aria-hidden="true"></i> Add </button>
+                                    <div id="demo_p">@Model.add_email</div>
+                                    <div id="TextBoxContainer" class="dynamic-form-scroll">
+                                        <!--Textboxes will be added here -->
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="btngetval" class="btn btn-default" data-dismiss="modal">Save</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Billing_Details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="control-label col-md-2">Payment Details</label>
+                <div class="col-md-10">
+                    @*<table>
+                    <tr>
+                        <td>
+
+                            &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Credit_Card_Details, "1") Yes
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp; &nbsp; @Html.RadioButtonFor(m => m.Credit_Card_Details, "0") No
+                        </td>
+                    </tr>
+
+                </table>*@
+                    @Html.DropDownListFor(model => model.Credit_Card_Details, TransCanada.Controllers.StaticValuesController.ListPaymentDetails(), new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Credit_Card_Details, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <div id="Card" class="form-group">
+                @Html.LabelFor(model => model.Card_Details, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Card_Details, new { htmlAttributes = new { @class = "form-control" } })
+                    <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                    @Html.ValidationMessageFor(model => model.Card_Details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Notes_On_Billing, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Notes_On_Billing, new { htmlAttributes = new { @class = "form-control" } })
+                    <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                    @Html.ValidationMessageFor(model => model.Notes_On_Billing, "", new { @class = "text-danger" })
+                </div>
+                @Html.Partial("popup")
+            </div>
+            @Html.HiddenFor(model=>model.add_email)
+            @*<div id="emailtbl">
+                @if (Model.Billing_Details.Contains("1"))
+                {
+                    <table class="table" id="Table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Billing Email
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.add_emails)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>*@
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @*<img id="blah" alt="your image" width="100" height="100" />
+
+                    <input type="file"
+                           onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">*@
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+
+    </div>
+}
+<div>
+    @Html.ActionLink("Back to List", "AccountsList")
+</div>
+
+@using (Html.BeginForm("AddContact", "Asp_Accounts", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        <div class="modal" id="ContactModal" tabindex="-2">
+            <div class="modal-dialog" role="document">
+
+                <div class="AddContact-content">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+
+                    <div>
+
+                        <div class="row">
+                            <div class="column">
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="col-md-10">
+                                    @Html.HiddenFor(model => model.labContact.location_id, new { htmlAttributes = new { @readonly = "readonly", @class = "form-control" } })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="control-label col-md-2">Select Location <span style="color:red;font-size:15px"> *</span></label>
+                                <div class="col-md-10">
+                                    @Html.DropDownListFor(model => model.labContact.Address_1, TransCanada.Controllers.StaticValuesController.ListLocation(Model.AccountId.ToString()), new { @class = "form-control" })
+
+                                    @Html.ValidationMessageFor(model => model.labContact.Address_1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2">First Name<span style="color:red;font-size:15px">*</span></label>
+                                @*@Html.LabelFor(model => model.labContact.firstname, htmlAttributes: new { @class = "control-label col-md-2" })<span style="color:red;font-size:15px"> *</span>*@
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.labContact.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.labContact.firstname, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2">Last Name</label>
+                                @*@Html.LabelFor(model => model.labContact.Lastname, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.labContact.Lastname, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.labContact.Lastname, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2">Email</label>
+                                @*@Html.LabelFor(model => model.labContact.email, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.labContact.email, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.labContact.email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2">Mobile</label>
+                                @*@Html.LabelFor(model => model.labContact.cell, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.labContact.cell, new { htmlAttributes = new { @class = "form-control",@type="number" } })
+                                    @Html.ValidationMessageFor(model => model.labContact.cell, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.labContact.officephone, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.labContact.officephone, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.labContact.officephone, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <div class="SaveBtn">
+                                        <input disabled type="submit" id="btnsubmit1" value="Save & Continue" class="btn btn-success btnNext" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
+@*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<link href="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet" type="text/css" />
+<link href="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
+@*<script src="~/Scripts/jquery-3.3.1.js"></script>*@
+<script src="~/Scripts/popup.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $('.listbox').multiselect({
+            buttonWidth: '280px',
+            includeSelectAllOption: true
+
+        });
+        $('.listbox12').multiselect({
+            buttonWidth: '280px',
+            includeSelectAllOption: true,
+            selectAllText: 'Both',
+        });
+    });
+</script>
+<script>
+
+    $(document).ready(function () {
+        //alert($("input[name='POCT_Testing']:checked").val()) to check the value of radio button
+
+        if ($("input[name='POCT_Testing']:checked").val() != 1) {
+            $("#Poct").hide();
+        }
+        if ($("#self_collect_list_0__IsChecked").prop('checked') == false) {
+
+            $("#self").hide();
+        }
+        else {
+            $("#self").show();
+        }
+        if ($("input[name='Clearing_House']:checked").val() != 1) {
+            $("#House").hide();
+        }
+        if ($("input[name='Compliance_Support']:checked").val() != 1) {
+            $("#support").hide();
+        }
+        if ($("input[name='Background_Checks']:checked").val() != 1) {
+            $("#Back").hide();
+        }
+        if ($("input[name='Pool']:checked").val() != 1) {
+            $("#Pool1").hide();
+        }
+        if ($("#Credit_Card_Details").val() == 0) {
+            $("#Card").hide();
+        }
+        if ($('#TPA_Category').val() == 2) {
+            $("#Text").show();
+
+        }
+        else {
+            $("#Text").hide();
+
+        }
+        $('#labContact_Address_1').change(function () {
+            Checkvalue();
+        });
+        $("#labContact_firstname").keyup(function () {
+            Checkvalue();
+        });
+        $("#labContact_Lastname").keyup(function () {
+            Checkvalue();
+        });
+        $("#labContact_email").keyup(function () {
+            Checkvalue();
+        });
+        $("#labContact_cell").keyup(function () {
+            Checkvalue();
+        });
+        $('#TPA_Category').change(function () {
+            if ($('#TPA_Category').val() == 2) {
+                $("#Text").show();
+
+            }
+            else {
+                $("#Text").hide();
+
+            }
+        });
+        $('input:radio[name=POCT_Testing]').change(function () {
+
+            if (this.value == '1') {
+                $("#Poct").show();
+            }
+            else if (this.value == '0') {
+                $("#Poct").hide();
+            }
+        });
+    });
+    $('#self_collect_list_0__IsChecked').change(function () {
+        if (this.checked) {
+            $("#self").show();
+        }
+        else {
+            $("#self").hide();
+        }
+    });
+    $('input:radio[name=Clearing_House]').change(function () {
+
+        if (this.value == '1') {
+            $("#House").show();
+        }
+        else if (this.value == '0') {
+            $("#House").hide();
+        }
+
+    });
+    $('input:radio[name=Compliance_Support]').change(function () {
+        if (this.value == '1') {
+            $("#support").show();
+        }
+        else if (this.value == '0') {
+            $("#support").hide();
+        }
+
+    });
+    $('input:radio[name=Background_Checks]').change(function () {
+        if (this.value == '1') {
+            $("#Back").show();
+        }
+        else if (this.value == '0') {
+            $("#Back").hide();
+        }
+
+    });
+    $('input:radio[name=Pool]').change(function () {
+        if (this.value == '1') {
+            $("#Pool1").show();
+        }
+        else if (this.value == '0') {
+            $("#Pool1").hide();
+        }
+
+    });
+    $('#Credit_Card_Details').change(function () {
+        if (this.value != '0') {
+            $("#Card").show();
+        }
+        else if (this.value == '0') {
+            $("#Card").hide();
+        }
+
+    });
+    
+    //$("#check").hide();
+    //if ($('#Category').val() == 1) {
+    //    $("#checkbox").show();
+    //    $("#Text").hide();
+    //}
+    //else if ($('#Category').val() == 4) {
+    //    $("#Text").show();
+    //    $("#checkbox").hide();
+    //}
+    //else {
+    //    $("#checkbox").hide();
+    //    $("#Text").hide();
+    //}
+    //$('#Category').change(function () {
+
+    //    if ($('#Category').val() == 1) {
+    //        $("#checkbox").show();
+    //        $("#Text").hide();
+    //    }
+
+    //    else if ($('#Category').val() == 4) {
+    //        $("#Text").show();
+    //        $("#checkbox").hide();
+    //    }
+    //    else {
+    //        $("#checkbox").hide();
+    //        $("#Text").hide();
+
+    //    }
+    //});
+
+    function Checkvalue() {
+        if ($('#labContact_Address_1').val() != '' && $('#labContact_firstname').val().length != '' ) {
+            $("#btnsubmit1").removeAttr("disabled");
+        }
+        else {
+            $("#btnsubmit1").attr("disabled", true);
+        }
+
+
+    }
+
+    $(function () {
+    var str = $("#Billing_Details").val();
+
+    if (str == null) {
+        $("#emailadd").hide();
+    }
+    else {
+        var n = str.includes("1");
+
+        if (n) {
+            $("#emailadd").show();
+        }
+        else {
+            $("#emailadd").hide();
+        }
+    }
+    var values = eval('');
+    if (values != null) {
+        var html = "";
+        $(values).each(function () {
+            var div = $("<div />");
+            div.html(GetDynamicTextBox(this) + "<br /><br />");
+            $("#TextBoxContainer").append(div);
+        });
+    }
+    $("#btnAdd").bind("click", function () {
+        if ($("#dynotext").length) {
+            var Contain = "";
+            var proceedtosave = true;
+            $("#TextBoxContainer :text").each(function () {
+                var email = $(this).val();
+                var re = /^(([^<>()[\]\\.,;:\s@@\"]+(\.[^<>()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                re.test(email);
+                if (re.test(email)) {
+                    if (Contain == "")
+                        Contain = Contain + email;
+                    else
+                        Contain = Contain + "," + email;
+
+                }
+                else {
+                    alert("Email is  not valid or empty");
+                    proceedtosave = false;
+                }
+            });
+
+            if (proceedtosave) {
+
+                $("#add_email").val(Contain);
+                var tt = $("#demo_p")["0"].innerHTML;
+                if (tt == "") {
+                    //$("#demo_p").addClass("hidden-div-custom");
+                    $("#demo_p").html("<b>" + Contain + "<b>");
+                }
+                else
+                    $("#demo_p").html("<b>" + tt + "," + Contain + "<b>");
+                Contain = "";
+            }
+            $("#dynotext").remove();
+            $("#TextBoxContainer").empty();
+            var div = $("<div />");
+            div.html(GetDynamicTextBox("") + "<br /><br />");
+            $("#TextBoxContainer").append(div);
+
+        }
+        else {
+            div = $("<div />");
+            div.html(GetDynamicTextBox("") + "<br /><br />");
+            $("#TextBoxContainer").append(div);
+        }
+    });
+    $("body").on("click", ".remove", function () {
+        $("#TextBoxContainer").empty();
+    });
+        $("#Billing_Details").change(function () {
+        var str1 = $(this).val();
+        try {
+            if (str1 == null) {
+                $("#emailadd").hide();
+            }
+            else {
+                var n = str1.includes("1");
+
+                if (n) {
+                    $("#emailadd").show();
+                }
+                else {
+                    $("#emailadd").hide();
+                }
+            }
+        }
+        catch (err) {
+             $("#emailadd").hide();
+        }
+    });
+    $("#btngetval").bind("click", function () {
+
+        var inputs = $("#TextBoxContainer").find($("input"));
+        var Contain = "";
+        var proceedtosave = true;
+        $("#TextBoxContainer :text").each(function () {
+            var email = $(this).val();
+            var re = /^(([^<>()[\]\\.,;:\s@@\"]+(\.[^<>()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            re.test(email);
+            if (re.test(email)) {
+                if (Contain === "")
+                    Contain = Contain + email;
+                else
+                    Contain = Contain + "," + email;
+
+            }
+            else {
+                alert("Email is  not valid or empty");
+                proceedtosave = false;
+            }
+        });
+
+        if (proceedtosave) {
+
+            $("#add_email").val(Contain);
+            var tt = $("#demo_p")["0"].innerHTML;
+            if (Contain !== "") {
+                if (tt === "") {
+                    $("#demo_p").addClass("hidden-div-custom");
+                    $("#demo_p").html("<b>" + Contain + "<b>");
+                }
+                else
+                    $("#demo_p").html("<b>" + tt + "," + Contain + "<b>");
+            }
+            Contain = "";
+        }
+        $("#dynotext").remove();
+        $("#TextBoxContainer").empty();
+        $("#add_email").val($("#demo_p")["0"].innerText);
+        
+
+    });
+});
+function GetDynamicTextBox(value) {
+    return '<div id="dynotext"><input  name = "DynamicTextBox" class="emailval" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,3}$"  value = "' + value + '" />&nbsp;' +
+        '<button type="button" class="remove btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>';
+}
+
+</script>

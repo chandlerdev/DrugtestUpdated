@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TransCanada.Models.LookUp>
+
+@{
+    ViewBag.Title = "ListSpecimantype";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Specimantype List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateSpeciman")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "EditSpeciman", new { id=item.Id }) |
+     
+            @Html.ActionLink("Delete", "DeleteSpeciman", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

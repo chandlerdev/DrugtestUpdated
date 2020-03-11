@@ -1,0 +1,101 @@
+﻿@model IEnumerable<TransCanada.Models.TpaLabLocation>
+
+@{
+    ViewBag.Title = "TLLocationList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+<h2>TPa-LabLocation List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddTlLocation", new { id =  @ViewBag.Locationid})
+</p>
+<table class="table" id="Table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.TPALab_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TPALAB_LocID)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Address_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+           
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.TPALab_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TPALAB_LocID)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address_1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address_2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Zip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+               
+                <td>
+                    @Html.ActionLink("Edit", "UpdateTlLocation", new { id = item.TPALAB_LocID }) |
+                    @Html.ActionLink("Contact", "ListTpaLocationContact", new { id=item.TPALAB_LocID}) |
+                    @Html.ActionLink("Delete", "DeleteTLLocation", new {  id=item.TPALAB_LocID}, new { onclick = "return confirm('Are you sure you want to delete this ?');" })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+<div>
+    @Html.ActionLink("Back to List", "TpaLabList")
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#Table').dataTable({
+        responsive: true
+    });
+
+</script>

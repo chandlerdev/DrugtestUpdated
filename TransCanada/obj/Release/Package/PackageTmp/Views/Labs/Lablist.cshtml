@@ -1,0 +1,334 @@
+﻿@model IEnumerable<TransCanadaDemo.Models.Labs>
+
+@{
+    ViewBag.Title = "Lablist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LabList</h2>
+<meta name="viewport" content="width=device-width" />
+<title>ShowGrid</title>
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<p>
+    @Html.ActionLink("Create New", "InsertLab")
+</p>
+<div class="table">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="Table" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.Lab_Id)
+                    </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabsLabNameLabLocation)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.ContactEmail1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ContactCellPhone1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabsState)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabsStreetAddress)
+                    </th>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.LabsCity)
+                        </th>*@
+
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.LabsZip)
+                        </th>*@
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.LabsMainNumber)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LabsNotes)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactFullName1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactJobFunction1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactOfficeNumber1)
+                        </th>*@
+
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.ContactFax1)
+                        </th>*@
+
+
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.ContactFullName2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactJobFunction2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactOfficeNumber2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactCellPhone2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactFax2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactEmail2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAAttacheacopyofaCCF)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LALab1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAAccountNumber1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAPannel1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LATPA1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAMRO1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LASampleType1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAAttachment1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LACCFs1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LALab2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAAccountNumber2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAPannel2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LATPA2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAMRO2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LASampleType2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAAttachment2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LACCFs2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LALab3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAAccountNumber3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAPannel3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LATPA3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAMRO3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LASampleType3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LAAttachment3)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LACCFs3)
+                        </th>*@
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.Lab_Id)
+                        </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabsLabNameLabLocation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContactEmail1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ContactCellPhone1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabsState)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabsStreetAddress)
+                        </td>
+
+
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.LabsCity)
+                            </td>*@
+
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.LabsZip)
+                            </td>*@
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.LabsMainNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LabsNotes)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactFullName1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactJobFunction1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactOfficeNumber1)
+                            </td>*@
+
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.ContactFax1)
+                            </td>*@
+
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.ContactFullName2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactJobFunction2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactOfficeNumber2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactCellPhone2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactFax2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactEmail2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAAttacheacopyofaCCF)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LALab1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAAccountNumber1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAPannel1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LATPA1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAMRO1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LASampleType1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAAttachment1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LACCFs1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LALab2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAAccountNumber2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAPannel2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LATPA2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAMRO2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LASampleType2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAAttachment2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LACCFs2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LALab3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAAccountNumber3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAPannel3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LATPA3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAMRO3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LASampleType3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LAAttachment3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LACCFs3)
+                            </td>*@
+                        <td>
+                            @Html.ActionLink("Edit", "UpdateLabs", new { id = item.Lab_Id }) |
+                            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                            @Html.ActionLink("Delete", "DeleteLab", new { id = item.Lab_Id },new { onclick = "return confirm('Are you sure you want to delete this ?');" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#Table').dataTable({
+        responsive: true
+    });
+
+</script>

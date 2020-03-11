@@ -1,0 +1,423 @@
+﻿@model TransCanada.Models.Lab_dd
+
+@{
+    ViewBag.Title = "Client Labs And SP";
+    Layout = null;
+}
+<br />
+@Html.Raw(MvcBreadCrumbs.BreadCrumb.Display())
+<h2>Lab/Manufacturer and Service Provides</h2>
+<br />
+<br />
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Drug Test</title>
+
+
+    @*<title><img src="images/Logo_TransCanada.png" alt="TransCanada" /></title>*@
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <style>
+
+        .navbar-inverse {
+            background-color: rgb(34, 34, 34);
+            height: 60px;
+            border-color: rgb(8, 8, 8);
+        }
+
+        h1, h2, h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 30px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 15px;
+        }
+
+        @@media only screen and (max-width: 768px) {
+            .column {
+                float: unset;
+                width: 100%;
+            }
+
+            table {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("TransCanada", "Index", "Client", new { area = "" }, new { @class = "navbar-brand" })*@
+                @*<img src="/images/Logo_WorkPlace.png" alt="WorkPlace Safety Screenings" />*@
+
+
+                <img style="display:block;width:80px;height:60px" src="/images/drugtestlogo.png" alt="Drug Test" />
+
+
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_MenuPartial")
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @if (@Session["Account_idPK"] != null)
+        {
+            <div style="float:right" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/Dashboard/Index">Home</a>|
+                    <a class="nav-item nav-link" href="/ClientLab/ClientLabSP/@Session["Account_idPK"]">Assign Lab&SP</a>|
+                    <a class="nav-item nav-link" href="/Location/Locations/@Session["Account_id"]">Locations and Contacts</a>
+
+                </div>
+            </div>
+        }
+        @if (Model.src == null)
+        {
+            <div style="float:right">
+                @Html.ActionLink("Back to List", "Index", "DashBoard")
+            </div>
+        }
+        else
+        {
+            <div style="float:right">
+                @Html.ActionLink("Back to List", "AccountsList", "Asp_Accounts")
+            </div>
+        }
+        @using (Html.BeginForm("ClientLabSP", "ClientLab", FormMethod.Post))
+        {
+            <br />
+            @Html.HiddenFor(m => m.src)
+            @Html.HiddenFor(m => m.Client_Name)
+            <div class="column">
+                <fieldset>
+                    <legend>Labs:</legend>
+                    <table width="90%">
+                        <tr>
+                            <td>
+                                @Html.Label("Labs/Manufacturers Name:")
+                                <br />
+                                <br />
+                                @Html.ListBoxFor(m => m.Lab_Name, Model.Labs, new { @class = "listbox" })
+                                <br />
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.Label("Product & Services:")
+                                <br />
+                                <br />
+                                @Html.ListBoxFor(m => m.Servicegroups, Model.Labservices, new { @class = "listbox" })
+                                <br />
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.Label("Panels:")
+                                <br />
+                                <br />
+                                @Html.ListBoxFor(m => m.SubServices, Model.Labsubservices, new { @class = "listbox" })
+                                <br />
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Assign" />
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    @if (Model.src == null)
+                                    {
+                                        <div>
+                                            @Html.ActionLink("Back to List", "Index", "DashBoard")
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div>
+                                            @Html.ActionLink("Back to List", "AccountsList", "Asp_Accounts")
+                                        </div>
+                                    }
+                                    <footer>
+                                        <p>&copy; @DateTime.Now.Year - Drug Test</p>
+                                    </footer>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <br />
+                <br />
+            </div>
+            <div class="column">
+
+
+                <fieldset>
+                    <legend>Service Providers:</legend>
+                    <table width="90%">
+                        <tr>
+                            <td>
+                                @Html.Label("SP Names:")
+                                <br />
+                                <br />
+                                @Html.ListBoxFor(m => m.SP_Names, Model.List_SP, new { @class = "listbox" })
+                                <br />
+                                <br />
+                            </td>
+                        </tr>
+                        <tr style="display:none">
+                            <td>
+                                @Html.Label("Service Groups:")
+                                <br />
+                                <br />
+                                @Html.ListBoxFor(m => m.SP_Panel_Groups, Model.List_Sp_Services, new { @class = "listbox" })
+                                <br />
+                                <br />
+                            </td>
+                        </tr>
+                        <tr style="display:none">
+                            <td>
+                                @Html.Label("Sub Services:")
+                                <br />
+                                <br />
+                                @Html.ListBoxFor(m => m.SP_Panels, Model.List_Sp_Sub_Services, new { @class = "listbox" })
+                                <br />
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <br />
+                <br />
+            </div>
+
+        }
+    </div>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
+              rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <link href="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
+        @*<script src="~/Scripts/jquery-3.3.1.js"></script>*@
+        <script type="text/javascript">
+
+            $(function () {
+                $('.listbox').multiselect({
+                    buttonWidth: '380px',
+                    includeSelectAllOption: true
+
+                });
+            });
+        </script>
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+            </script>
+        }
+
+
+        <script>
+            $(document).ready(function () {
+                //document.getElementById("service_grp_name").disabled = true;
+                var select = $("#Lab_Name");
+                select.change(function (e) {
+                    var result = "";
+                    var options = select.children("option:selected");
+                    $.each(options, function (i, el) {
+                        result += $(el).val();
+                        if (i < options.length - 1) {
+                            result += ", ";
+                        }
+                    });
+
+                    if (result.length == 0) {
+                        $("#Servicegroups").empty();
+                        $("#Servicegroups").multiselect('rebuild');
+                        $("#SubServices").empty();
+                        $("#SubServices").multiselect('rebuild');
+                    }
+
+                    $.ajax({
+                        data: { 'Type': 'Lab', 'name': result },
+                        type: 'POST',
+                        dataType: 'json',
+                        url: '/ClientLab/JsonGetServices',
+                        success: function (result) {
+                            var foo = $('#Servicegroups').val();
+                            $("#Servicegroups").empty();
+                            $.each(result, function (i, item) {
+                                $("#Servicegroups").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                                $("#Servicegroups").multiselect('rebuild');
+
+                            });
+                            $("#Servicegroups option").each(function () {
+                                $("#Servicegroups").val(foo);
+
+                                $("#Servicegroups").multiselect("refresh");
+                            });
+
+                        },
+                        error: function (ex) {
+                            alert('We face some technical difficulties');
+                        }
+                    });
+                });
+                var select1 = $("#Servicegroups");
+                select1.change(function (e) {
+                    var result1 = "";
+                    var options = select1.children("option:selected");
+                    $.each(options, function (i, el) {
+                        result1 += $(el).val();
+                        if (i < options.length - 1) {
+                            result1 += ", ";
+                        }
+                    });
+                    if (result1 == "") {
+
+                        $("#SubServices").empty();
+                        $("#SubServices").multiselect('rebuild');
+                    }
+                    $.ajax({
+                        data: { 'Type': 'Lab', 'name': result1 },
+                        type: 'POST',
+                        dataType: 'json',
+                        url: '/ClientLab/JsonGetSubServices',
+                        success: function (result) {
+                            var foo = $('#SubServices').val();
+                            $("#SubServices").empty();
+                            $.each(result, function (i, item) {
+                                $("#SubServices").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                                $("#SubServices").multiselect('rebuild');
+                            });
+                            $("#SubServices option").each(function () {
+                                $("#SubServices").val(foo);
+
+                                $("#SubServices").multiselect("refresh");
+                            });
+                        },
+                        error: function (ex) {
+                            alert('We face some technical difficulties');
+                        }
+                    });
+                });
+                //var select_Sp_name = $("#SP_Names");
+                //select_Sp_name.change(function (e) {
+                //    var result_sp_name = "";
+                //    var options = select_Sp_name.children("option:selected");
+                //    $.each(options, function (i, el) {
+                //        result_sp_name += $(el).val();
+                //        if (i < options.length - 1) {
+                //            result_sp_name += ", ";
+                //        }
+                //    });
+
+                //    if (result_sp_name.length == 0) {
+                //        $("#SP_Panel_Groups").empty();
+                //        $("#SP_Panel_Groups").multiselect('rebuild');
+                //        $("#SP_Panels").empty();
+                //        $("#SP_Panels").multiselect('rebuild');
+                //    }
+
+                //    $.ajax({
+                //        data: { 'Type': 'SP', 'name': result_sp_name },
+                //        type: 'POST',
+                //        dataType: 'json',
+                //        url: '/ClientLab/JsonGetServices',
+                //        success: function (result) {
+                //            var foo = $("#SP_Panel_Groups").val();
+                //            $("#SP_Panel_Groups").empty();
+                //            $.each(result, function (i, item) {
+                //                $("#SP_Panel_Groups").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                //                $("#SP_Panel_Groups").multiselect('rebuild');
+                //            });
+                //            $("#SP_Panel_Groups option").each(function () {
+                //                $("#SP_Panel_Groups").val(foo);
+
+                //                $("#SP_Panel_Groups").multiselect("refresh");
+                //            });
+
+                //        },
+                //        error: function (ex) {
+                //            alert('We face some technical difficulties');
+                //        }
+                //    });
+                //});
+                //var select_SP_Services = $("#SP_Panel_Groups");
+                //select_SP_Services.change(function (e) {
+
+                //    var result_SP_Services = "";
+                //    var options = select_SP_Services.children("option:selected");
+                //    $.each(options, function (i, el) {
+                //        result_SP_Services += $(el).val();
+                //        if (i < options.length - 1) {
+                //            result_SP_Services += ", ";
+                //        }
+                //    });
+
+                //    if (result_SP_Services.length == 0) {
+                //        $("#SP_Panels").empty();
+                //        $("#SP_Panels").multiselect('rebuild');
+                //    }
+
+                //    $.ajax({
+                //        data: { 'Type': 'SP', 'name': result_SP_Services },
+                //        type: 'POST',
+                //        dataType: 'json',
+                //        url: '/ClientLab/JsonGetSubServices',
+                //        success: function (result) {
+                //            var foo = $("#SP_Panels").val();
+                //            $("#SP_Panels").empty();
+                //            $.each(result, function (i, item) {
+                //                $("#SP_Panels").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                //                $("#SP_Panels").multiselect('rebuild');
+                //            });
+                //            $("#SP_Panels option").each(function () {
+                //                $("#SP_Panels").val(foo);
+
+                //                $("#SP_Panels").multiselect("refresh");
+                //            });
+
+                //        },
+                //        error: function (ex) {
+                //            alert('We face some technical difficulties');
+                //        }
+                //    });
+                //});
+            });
+        </script>
+
+</body>
+</html>
+

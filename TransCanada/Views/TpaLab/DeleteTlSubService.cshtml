@@ -1,0 +1,81 @@
+﻿@model TransCanada.Models.TpaLabsubservice
+
+@{
+    ViewBag.Title = "DeleteTlSubService";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DeleteTlSubService</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TpaLabsubservice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TPALab_SubService_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPALab_SubService_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TPALab_Service_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPALab_Service_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TPALab_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPALab_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TPAlab_Service_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPAlab_Service_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TPAlab_Service_Ext_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TPAlab_Service_Ext_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Service_Charges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Service_Charges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client_Billing_Charges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client_Billing_Charges)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

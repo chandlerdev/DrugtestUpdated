@@ -1,0 +1,11 @@
+﻿@model TransCanadaDemo.Models.Location_Model
+
+@{
+    ViewBag.Title = "ListLab";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListLab</h2>
+
+@Html.DropDownListFor(m => m.ListLab, new SelectList(Model.ListLab, dataTextField: "LabsLabNameLabLocation", dataValueField: "Lab_Id"), "Select",new { htmlAttributes = new { @class = "form-control" } })
+

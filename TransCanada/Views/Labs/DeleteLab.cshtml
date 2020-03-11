@@ -1,0 +1,385 @@
+﻿@model TransCanadaDemo.Models.Labs
+
+@{
+    ViewBag.Title = "DeleteLab";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DeleteLab</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Labs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Lab_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lab_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabsLabNameLabLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabsLabNameLabLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabsStreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabsStreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabsCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabsCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabsState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabsState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabsZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabsZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabsMainNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabsMainNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabsNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabsNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactFullName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactFullName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactJobFunction1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactJobFunction1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactOfficeNumber1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactOfficeNumber1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactCellPhone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactCellPhone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactFax1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactFax1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactEmail1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactEmail1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactFullName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactFullName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactJobFunction2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactJobFunction2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactOfficeNumber2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactOfficeNumber2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactCellPhone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactCellPhone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactFax2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactFax2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactEmail2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactEmail2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAAttacheacopyofaCCF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAAttacheacopyofaCCF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LALab1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LALab1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAAccountNumber1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAAccountNumber1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAPannel1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAPannel1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LATPA1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LATPA1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAMRO1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAMRO1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LASampleType1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LASampleType1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAAttachment1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAAttachment1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LACCFs1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LACCFs1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LALab2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LALab2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAAccountNumber2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAAccountNumber2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAPannel2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAPannel2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LATPA2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LATPA2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAMRO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAMRO2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LASampleType2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LASampleType2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAAttachment2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAAttachment2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LACCFs2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LACCFs2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LALab3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LALab3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAAccountNumber3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAAccountNumber3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAPannel3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAPannel3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LATPA3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LATPA3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAMRO3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAMRO3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LASampleType3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LASampleType3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAAttachment3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAAttachment3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LACCFs3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LACCFs3)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

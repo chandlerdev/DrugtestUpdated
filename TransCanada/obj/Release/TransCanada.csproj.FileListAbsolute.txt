@@ -1,0 +1,1217 @@
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\ApplicationInsights.config
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\TransCanada.dll.config
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\TransCanada.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\TransCanada.pdb
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\csc.exe
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\csc.exe.config
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\csc.rsp
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\csi.exe
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\csi.exe.config
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\csi.rsp
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.AppContext.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Console.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.IO.Compression.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.IO.Pipes.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Security.Claims.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Threading.Thread.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.ValueTuple.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\vbc.exe
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\vbc.exe.config
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\vbc.rsp
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Antlr3.Runtime.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\EntityFramework.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\EntityFramework.SqlServer.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.Web.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.ApplicationInsights.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Newtonsoft.Json.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Owin.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.Helpers.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.Mvc.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.Optimization.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.Razor.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.WebPages.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\WebGrease.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.Helpers.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.Mvc.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.Optimization.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.Razor.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.WebPages.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Newtonsoft.Json.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Antlr3.Runtime.pdb
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\EntityFramework.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\EntityFramework.SqlServer.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.AI.Web.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CoreCompileInputs.cache
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\obj\Release\TransCanada.dll
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\obj\Release\TransCanada.pdb
+H:\Yogesh\Project_Manager\New Project Estimation\Transcanada\ClientDemo\TransCanada\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\ApplicationInsights.config
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\TransCanada.dll.config
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\TransCanada.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\TransCanada.pdb
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\csc.exe
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\csc.exe.config
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\csc.rsp
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\csi.exe
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\csi.exe.config
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\csi.rsp
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.AppContext.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Console.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.IO.Compression.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.IO.Pipes.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Security.Claims.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Threading.Thread.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.ValueTuple.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\vbc.exe
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\vbc.exe.config
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\vbc.rsp
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+C:\DotNet\Live projects\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CoreCompileInputs.cache
+C:\DotNet\Live projects\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+C:\DotNet\Live projects\TransCanada\TransCanada\obj\Release\TransCanada.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\obj\Release\TransCanada.pdb
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Antlr3.Runtime.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\EntityFramework.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\EntityFramework.SqlServer.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.Web.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.ApplicationInsights.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Newtonsoft.Json.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Owin.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.Helpers.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.Mvc.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.Optimization.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.Razor.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.WebPages.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\WebGrease.dll
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.Helpers.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.Mvc.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.Optimization.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.Razor.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.WebPages.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Newtonsoft.Json.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Antlr3.Runtime.pdb
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\EntityFramework.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\EntityFramework.SqlServer.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.AI.Web.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\DotNet\Live projects\TransCanada\TransCanada\obj\Release\TransCanada.csprojAssemblyReference.cache
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\ApplicationInsights.config
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\TransCanada.dll.config
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\TransCanada.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\TransCanada.pdb
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.exe
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.exe.config
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.rsp
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.exe
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.exe.config
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.rsp
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.AppContext.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Console.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.Compression.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.Pipes.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Claims.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Threading.Thread.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.ValueTuple.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.exe
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.exe.config
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.rsp
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Antlr3.Runtime.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\EntityFramework.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\EntityFramework.SqlServer.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Web.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.ApplicationInsights.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Newtonsoft.Json.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Owin.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.Helpers.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.Mvc.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.Optimization.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.Razor.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\WebGrease.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.Helpers.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.Mvc.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.Optimization.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.Razor.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Newtonsoft.Json.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Antlr3.Runtime.pdb
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\EntityFramework.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\EntityFramework.SqlServer.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Web.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CoreCompileInputs.cache
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.dll
+D:\4 [00] - Disk1-05 (H_ Basic)\Root\Live Projects\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.pdb
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\ApplicationInsights.config
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\TransCanada.dll.config
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\TransCanada.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\TransCanada.pdb
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.exe
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.exe.config
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.rsp
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.exe
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.exe.config
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.rsp
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.AppContext.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Console.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.Compression.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.Pipes.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Claims.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Threading.Thread.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.ValueTuple.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.exe
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.exe.config
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.rsp
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Antlr3.Runtime.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\EntityFramework.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\EntityFramework.SqlServer.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Web.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.ApplicationInsights.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Newtonsoft.Json.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Owin.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.Helpers.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.Mvc.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.Optimization.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.Razor.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\WebGrease.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.Helpers.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.Mvc.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.Optimization.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.Razor.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Newtonsoft.Json.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Antlr3.Runtime.pdb
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\EntityFramework.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\EntityFramework.SqlServer.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Web.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DOTNET\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+D:\DOTNET\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.dll
+D:\DOTNET\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.pdb
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\ApplicationInsights.config
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\TransCanada.dll.config
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\TransCanada.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\TransCanada.pdb
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.exe
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.exe.config
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\csc.rsp
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.exe
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.exe.config
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\csi.rsp
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.AppContext.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Console.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.Compression.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.IO.Pipes.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Claims.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Threading.Thread.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.ValueTuple.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.exe
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.exe.config
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\vbc.rsp
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Antlr3.Runtime.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\EntityFramework.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\EntityFramework.SqlServer.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Web.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.ApplicationInsights.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Newtonsoft.Json.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Owin.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.Helpers.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.Mvc.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.Optimization.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.Razor.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\WebGrease.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.Helpers.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.Mvc.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.Optimization.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.Razor.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Newtonsoft.Json.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Antlr3.Runtime.pdb
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\EntityFramework.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\EntityFramework.SqlServer.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.AI.Web.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\New folder\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.csprojAssemblyReference.cache
+D:\New folder\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CoreCompileInputs.cache
+D:\New folder\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+D:\New folder\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.dll
+D:\New folder\Transcanda\TransCanada\TransCanada\obj\Release\TransCanada.pdb
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\ApplicationInsights.config
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\TransCanada.dll.config
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\TransCanada.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\TransCanada.pdb
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\csc.exe
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\csc.exe.config
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\csc.rsp
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\csi.exe
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\csi.exe.config
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\csi.rsp
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.AppContext.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Console.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.IO.Compression.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.IO.Pipes.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Security.Claims.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Threading.Thread.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.ValueTuple.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\vbc.exe
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\vbc.exe.config
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\vbc.rsp
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Antlr3.Runtime.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\EntityFramework.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\EntityFramework.SqlServer.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.Web.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.ApplicationInsights.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Newtonsoft.Json.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Owin.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.Helpers.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.Mvc.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.Optimization.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.Razor.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.WebPages.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\WebGrease.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.Helpers.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.Mvc.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.Optimization.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.Razor.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.WebPages.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Newtonsoft.Json.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Antlr3.Runtime.pdb
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\EntityFramework.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\EntityFramework.SqlServer.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.AI.Web.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\obj\Release\TransCanada.csprojAssemblyReference.cache
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\obj\Release\TransCanada.dll
+E:\Transcanada updated on 23.12\TransCanada_23_12\TransCanada\TransCanada\obj\Release\TransCanada.pdb
+D:\TransCanada\TransCanada\bin\ApplicationInsights.config
+D:\TransCanada\TransCanada\bin\TransCanada.dll.config
+D:\TransCanada\TransCanada\bin\TransCanada.dll
+D:\TransCanada\TransCanada\bin\TransCanada.pdb
+D:\TransCanada\TransCanada\bin\roslyn\csc.exe
+D:\TransCanada\TransCanada\bin\roslyn\csc.exe.config
+D:\TransCanada\TransCanada\bin\roslyn\csc.rsp
+D:\TransCanada\TransCanada\bin\roslyn\csi.exe
+D:\TransCanada\TransCanada\bin\roslyn\csi.exe.config
+D:\TransCanada\TransCanada\bin\roslyn\csi.rsp
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\TransCanada\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.AppContext.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Console.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.IO.Compression.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.IO.Pipes.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Security.Claims.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Threading.Thread.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.ValueTuple.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.dll
+D:\TransCanada\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\TransCanada\TransCanada\bin\roslyn\vbc.exe
+D:\TransCanada\TransCanada\bin\roslyn\vbc.exe.config
+D:\TransCanada\TransCanada\bin\roslyn\vbc.rsp
+D:\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe
+D:\TransCanada\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+D:\TransCanada\TransCanada\bin\Antlr3.Runtime.dll
+D:\TransCanada\TransCanada\bin\EntityFramework.dll
+D:\TransCanada\TransCanada\bin\EntityFramework.SqlServer.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AI.Web.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+D:\TransCanada\TransCanada\bin\Microsoft.ApplicationInsights.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+D:\TransCanada\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+D:\TransCanada\TransCanada\bin\MvcBreadCrumbs.dll
+D:\TransCanada\TransCanada\bin\Newtonsoft.Json.dll
+D:\TransCanada\TransCanada\bin\Owin.dll
+D:\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+D:\TransCanada\TransCanada\bin\System.Web.Helpers.dll
+D:\TransCanada\TransCanada\bin\System.Web.Mvc.dll
+D:\TransCanada\TransCanada\bin\System.Web.Optimization.dll
+D:\TransCanada\TransCanada\bin\System.Web.Razor.dll
+D:\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.dll
+D:\TransCanada\TransCanada\bin\System.Web.WebPages.dll
+D:\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.dll
+D:\TransCanada\TransCanada\bin\WebGrease.dll
+D:\TransCanada\TransCanada\bin\MvcBreadCrumbs.pdb
+D:\TransCanada\TransCanada\bin\System.Web.Helpers.xml
+D:\TransCanada\TransCanada\bin\System.Web.Mvc.xml
+D:\TransCanada\TransCanada\bin\System.Web.Optimization.xml
+D:\TransCanada\TransCanada\bin\System.Web.Razor.xml
+D:\TransCanada\TransCanada\bin\System.Web.WebPages.xml
+D:\TransCanada\TransCanada\bin\System.Web.WebPages.Deployment.xml
+D:\TransCanada\TransCanada\bin\System.Web.WebPages.Razor.xml
+D:\TransCanada\TransCanada\bin\Newtonsoft.Json.xml
+D:\TransCanada\TransCanada\bin\Antlr3.Runtime.pdb
+D:\TransCanada\TransCanada\bin\EntityFramework.xml
+D:\TransCanada\TransCanada\bin\EntityFramework.SqlServer.xml
+D:\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+D:\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\TransCanada\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\TransCanada\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+D:\TransCanada\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+D:\TransCanada\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\TransCanada\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+D:\TransCanada\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+D:\TransCanada\TransCanada\bin\Microsoft.AI.Web.xml
+D:\TransCanada\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TransCanada\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+D:\TransCanada\TransCanada\obj\Release\TransCanada.dll
+D:\TransCanada\TransCanada\obj\Release\TransCanada.pdb
+D:\TransCanada\TransCanada\obj\Release\TransCanada.csprojAssemblyReference.cache
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+E:\Drugtest\TransCanada\bin\roslyn\VBCSCompiler.exe
+E:\Drugtest\TransCanada\bin\ApplicationInsights.config
+E:\Drugtest\TransCanada\bin\TransCanada.dll.config
+E:\Drugtest\TransCanada\bin\TransCanada.dll
+E:\Drugtest\TransCanada\bin\TransCanada.pdb
+E:\Drugtest\TransCanada\bin\roslyn\csc.exe
+E:\Drugtest\TransCanada\bin\roslyn\csc.exe.config
+E:\Drugtest\TransCanada\bin\roslyn\csc.rsp
+E:\Drugtest\TransCanada\bin\roslyn\csi.exe
+E:\Drugtest\TransCanada\bin\roslyn\csi.exe.config
+E:\Drugtest\TransCanada\bin\roslyn\csi.rsp
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Drugtest\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.AppContext.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Console.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.IO.Compression.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.IO.Pipes.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Security.Claims.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Threading.Thread.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.ValueTuple.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Xml.XPath.dll
+E:\Drugtest\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Drugtest\TransCanada\bin\roslyn\vbc.exe
+E:\Drugtest\TransCanada\bin\roslyn\vbc.exe.config
+E:\Drugtest\TransCanada\bin\roslyn\vbc.rsp
+E:\Drugtest\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+E:\Drugtest\TransCanada\bin\Antlr3.Runtime.dll
+E:\Drugtest\TransCanada\bin\EntityFramework.dll
+E:\Drugtest\TransCanada\bin\EntityFramework.SqlServer.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AI.Web.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+E:\Drugtest\TransCanada\bin\Microsoft.ApplicationInsights.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Drugtest\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Drugtest\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Drugtest\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+E:\Drugtest\TransCanada\bin\MvcBreadCrumbs.dll
+E:\Drugtest\TransCanada\bin\Newtonsoft.Json.dll
+E:\Drugtest\TransCanada\bin\Owin.dll
+E:\Drugtest\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Drugtest\TransCanada\bin\System.Web.Helpers.dll
+E:\Drugtest\TransCanada\bin\System.Web.Mvc.dll
+E:\Drugtest\TransCanada\bin\System.Web.Optimization.dll
+E:\Drugtest\TransCanada\bin\System.Web.Razor.dll
+E:\Drugtest\TransCanada\bin\System.Web.WebPages.Deployment.dll
+E:\Drugtest\TransCanada\bin\System.Web.WebPages.dll
+E:\Drugtest\TransCanada\bin\System.Web.WebPages.Razor.dll
+E:\Drugtest\TransCanada\bin\WebGrease.dll
+E:\Drugtest\TransCanada\bin\MvcBreadCrumbs.pdb
+E:\Drugtest\TransCanada\bin\System.Web.Helpers.xml
+E:\Drugtest\TransCanada\bin\System.Web.Mvc.xml
+E:\Drugtest\TransCanada\bin\System.Web.Optimization.xml
+E:\Drugtest\TransCanada\bin\System.Web.Razor.xml
+E:\Drugtest\TransCanada\bin\System.Web.WebPages.xml
+E:\Drugtest\TransCanada\bin\System.Web.WebPages.Deployment.xml
+E:\Drugtest\TransCanada\bin\System.Web.WebPages.Razor.xml
+E:\Drugtest\TransCanada\bin\Newtonsoft.Json.xml
+E:\Drugtest\TransCanada\bin\Antlr3.Runtime.pdb
+E:\Drugtest\TransCanada\bin\EntityFramework.xml
+E:\Drugtest\TransCanada\bin\EntityFramework.SqlServer.xml
+E:\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Drugtest\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Drugtest\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Drugtest\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Drugtest\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+E:\Drugtest\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+E:\Drugtest\TransCanada\bin\Microsoft.AI.Web.xml
+E:\Drugtest\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Drugtest\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+E:\Drugtest\TransCanada\obj\Release\TransCanada.dll
+E:\Drugtest\TransCanada\obj\Release\TransCanada.pdb
+E:\Drugtest\TransCanada\obj\Release\TransCanada.csprojAssemblyReference.cache
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\VBCSCompiler.exe
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\ApplicationInsights.config
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\TransCanada.dll.config
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\TransCanada.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\TransCanada.pdb
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\csc.exe
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\csc.exe.config
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\csc.rsp
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\csi.exe
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\csi.exe.config
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\csi.rsp
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.AppContext.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Console.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.Compression.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.Pipes.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Claims.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Threading.Thread.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.ValueTuple.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Xml.XPath.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\vbc.exe
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\vbc.exe.config
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\vbc.rsp
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Antlr3.Runtime.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\EntityFramework.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\EntityFramework.SqlServer.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.Web.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.ApplicationInsights.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\MvcBreadCrumbs.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Newtonsoft.Json.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Owin.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.Helpers.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.Mvc.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.Optimization.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.Razor.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.Deployment.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.Razor.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\WebGrease.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\MvcBreadCrumbs.pdb
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.Helpers.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.Mvc.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.Optimization.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.Razor.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.Deployment.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.Razor.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Newtonsoft.Json.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Antlr3.Runtime.pdb
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\EntityFramework.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\EntityFramework.SqlServer.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.Web.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DT_updated\Drugtest\Drugtest\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+E:\DT_updated\Drugtest\Drugtest\TransCanada\obj\Release\TransCanada.dll
+E:\DT_updated\Drugtest\Drugtest\TransCanada\obj\Release\TransCanada.pdb
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\ApplicationInsights.config
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\TransCanada.dll.config
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\TransCanada.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\TransCanada.pdb
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\csc.exe
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\csc.exe.config
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\csc.rsp
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\csi.exe
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\csi.exe.config
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\csi.rsp
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.AppContext.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Collections.Immutable.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Console.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.Process.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.Compression.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.IO.Pipes.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Reflection.Metadata.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.AccessControl.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Claims.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Security.Principal.Windows.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Threading.Thread.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.ValueTuple.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Xml.XmlDocument.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Xml.XPath.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\vbc.exe
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\vbc.exe.config
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\vbc.rsp
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\VBCSCompiler.exe
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\roslyn\VBCSCompiler.exe.config
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Antlr3.Runtime.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\EntityFramework.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\EntityFramework.SqlServer.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.Agent.Intercept.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.DependencyCollector.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.Web.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.WindowsServer.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.ApplicationInsights.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Cookies.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Facebook.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Google.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.OAuth.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Twitter.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Web.Infrastructure.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\MvcBreadCrumbs.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Newtonsoft.Json.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Owin.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Diagnostics.DiagnosticSource.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.Helpers.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.Mvc.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.Optimization.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.Razor.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.Deployment.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.Razor.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\WebGrease.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\MvcBreadCrumbs.pdb
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.Helpers.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.Mvc.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.Optimization.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.Razor.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.Deployment.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Web.WebPages.Razor.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Newtonsoft.Json.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Antlr3.Runtime.pdb
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\EntityFramework.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\EntityFramework.SqlServer.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Facebook.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Cookies.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Google.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.Twitter.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.Owin.Security.OAuth.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\System.Diagnostics.DiagnosticSource.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.DependencyCollector.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.WindowsServer.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.AI.Web.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DT-Final\Drugtest\Drugtest\TransCanada\obj\Release\TransCanada.csproj.CopyComplete
+E:\DT-Final\Drugtest\Drugtest\TransCanada\obj\Release\TransCanada.dll
+E:\DT-Final\Drugtest\Drugtest\TransCanada\obj\Release\TransCanada.pdb

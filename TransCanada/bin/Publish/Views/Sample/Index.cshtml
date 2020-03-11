@@ -1,0 +1,53 @@
+﻿@{ 
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+</head>
+<body>
+    <div>
+        <table id="example" class="display" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>OrgNumber</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Fax</th>
+                </tr>
+            </thead>
+            @*<tfoot>
+                <tr>
+                    <th>OrgNumber</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Fax</th>
+                </tr>
+            </tfoot>*@
+        </table>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            processing: true,
+            serverSide: true,
+            searchable: true,
+            ajax: {
+                url: '@Url.Action("GetOrganizations")',
+                type: 'POST',
+                dataSrc: 'data',
+            },
+            columns: [{ data: "OrgNumber" },
+            { data: "Name" }, { data: "Phone" }, { data: "Fax" }]
+        });
+    });
+</script>

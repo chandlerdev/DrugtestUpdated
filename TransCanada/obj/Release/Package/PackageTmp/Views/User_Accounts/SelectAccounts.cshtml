@@ -1,0 +1,53 @@
+﻿@model TransCanada.Models.UserAccounts_Model
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SelectAccounts</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Select Account :
+                </td>
+                <td>
+
+                    @Html.DropDownListFor(m => m.Id, new SelectList(Model.Id, "LogoImage", "AccountId"), "Select Account")
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select User :
+                </td>
+                <td>
+                    @Html.DropDownListFor(m => m.Users, new SelectList(Model.Users, "Id", "UserName"), "Select User")
+
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" /> <input type="submit" value="Cancel" class="btn btn-default" />
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+</html>

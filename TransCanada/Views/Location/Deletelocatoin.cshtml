@@ -1,0 +1,729 @@
+﻿@model TransCanadaDemo.Models.Location_Model
+
+@{
+    ViewBag.Title = "Deletelocatoin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Deletelocatoin</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Location_Model</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Location_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_LocationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_LocationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_StreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_StreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_Main_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_Main_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConatctWithANY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConatctWithANY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShyBladdersLugWithNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShyBladdersLugWithNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientSample)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientSample)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RefusalToTest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefusalToTest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BatConfirmedPostive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BatConfirmedPostive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CancelledOrIncompleteTests)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CancelledOrIncompleteTests)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorizationFormsSentVia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthorizationFormsSentVia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_JobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_OfficeNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_OfficeNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_CellPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_CellPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_i3ScreenAccess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_i3ScreenAccess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_BackgroundScreeningAccess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_BackgroundScreeningAccess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Locations_OccupationalMedicineAccess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Locations_OccupationalMedicineAccess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactOfficeNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactOfficeNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactFax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactFax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactStreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactStreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactEmailInvoices)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactEmailInvoices)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillingContactBillingOptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillingContactBillingOptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccAttacheCopyCCF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccAttacheCopyCCF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccLab1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccLab1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccAccountNumber1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccAccountNumber1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccPannel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccPannel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccTpa1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccTpa1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccMro1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccMro1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccSampleType1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccSampleType1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccAttachment1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccAttachment1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccCcf1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccCcf1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccLab2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccLab2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccAccountNumber2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccAccountNumber2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccPannel2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccPannel2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccTpa2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccTpa2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccMro2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccMro2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccSampleType2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccSampleType2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccAttachment2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccAttachment2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccCcf2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccCcf2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccLab3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccLab3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccAccountNumber3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccAccountNumber3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccPannel3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccPannel3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccTpa3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccTpa3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccMro3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccMro3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccSampleType3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccSampleType3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccAttachment3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccAttachment3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LabAccCcf3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LabAccCcf3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServicesProvided)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServicesProvided)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPPreEmployment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPPreEmployment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPBackgroundPackagePreEmploy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPBackgroundPackagePreEmploy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPRandom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPRandom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPPostAccident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPPostAccident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPReasonableSuspicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPReasonableSuspicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPFollowUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPFollowUp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPReturntoDuty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPReturntoDuty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPAnnual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPAnnual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPBackgroundPackageAnnual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPBackgroundPackageAnnual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPNegativeDilute)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPNegativeDilute)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPTPoolName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPTPoolName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPTPoolType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPTPoolType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPTOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPTOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPTPoolManager)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPTPoolManager)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPTOwnerType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPTOwnerType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPTdotnondot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPTdotnondot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RPTdotagency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RPTdotagency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPAlcoholGetsDrug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPAlcoholGetsDrug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPSelectionLevelforDrug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPSelectionLevelforDrug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPPercent1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPPercent1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPSelectionLevelforAlcohol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPSelectionLevelforAlcohol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPPercent2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPPercent2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPAlternatesforDrug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPAlternatesforDrug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPPercent3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPPercent3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPAlternatesforAlcohol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPAlternatesforAlcohol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPPercent4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPPercent4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RTPNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RTPNotes)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

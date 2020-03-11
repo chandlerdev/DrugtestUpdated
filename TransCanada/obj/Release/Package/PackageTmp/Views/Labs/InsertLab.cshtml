@@ -1,0 +1,594 @@
+﻿@model TransCanadaDemo.Models.Labs
+
+@{
+    ViewBag.Title = "InsertLab";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Insert Lab</h2>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+
+
+
+        fieldset {
+            display: block;
+            margin-left: 2px;
+            margin-right: 2px;
+            padding-top: 0.35em;
+            padding-bottom: 0.625em;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+            border: 2px groove;
+        }
+
+        /*legend {
+            border: 2px groove;
+        }*/
+    </style>
+</head>
+<body>
+
+    @using (Html.BeginForm("InsertLab", "Labs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Labs</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            @*<div class="form-group">
+                    @Html.LabelFor(model => model.Lab_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Lab_Id, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Lab_Id, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+            @*<div class="col-md-2">
+                    <b>@Html.DisplayName("AccountsId")</b>
+                </div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AccountsId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AccountsId, "", new { @class = "text-danger" })
+                </div>
+
+                <br />*@
+        <form>
+            <fieldset>
+                <legend>Labs</legend>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Lab Name")</b>
+                                @Html.EditorFor(model => model.LabsLabNameLabLocation, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LabsLabNameLabLocation, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Street Address")</b>
+                                @Html.EditorFor(model => model.LabsStreetAddress, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LabsStreetAddress, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("City")</b>
+                                @Html.EditorFor(model => model.LabsCity, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LabsCity, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("State")</b>
+                                @Html.EditorFor(model => model.LabsState, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LabsState, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Zip")</b>
+                                @Html.EditorFor(model => model.LabsZip, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LabsZip, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Main Number")</b>
+                                @Html.EditorFor(model => model.LabsMainNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LabsMainNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Notes")</b>
+                                @Html.EditorFor(model => model.LabsNotes, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LabsNotes, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Full Name1")</b>
+                                @Html.EditorFor(model => model.ContactFullName1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LabsZip, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Job Function1")</b>
+                                @Html.EditorFor(model => model.ContactJobFunction1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactJobFunction1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Office Number1")</b>
+                                @Html.EditorFor(model => model.ContactOfficeNumber1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactOfficeNumber1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Cell Phone1")</b>
+                                @Html.EditorFor(model => model.ContactCellPhone1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactCellPhone1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Fax1")</b>
+                                @Html.EditorFor(model => model.ContactFax1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactFax1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Contact Email1")</b>
+                                @Html.EditorFor(model => model.ContactEmail1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactEmail1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Full Name2")</b>
+                                @Html.EditorFor(model => model.ContactFullName2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactFullName2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Job Function2")</b>
+                                @Html.EditorFor(model => model.ContactJobFunction2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactJobFunction2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>CONTACT</legend>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Office Number2")</b>
+                                @Html.EditorFor(model => model.ContactOfficeNumber2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactOfficeNumber2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Cell Phone2")</b>
+                                @Html.EditorFor(model => model.ContactCellPhone2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactCellPhone2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Fax2")</b>
+                                @Html.EditorFor(model => model.ContactFax2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactFax2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Email2")</b>
+                                @Html.EditorFor(model => model.ContactEmail2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ContactEmail2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Attache copy CCF")</b>
+                                @Html.EditorFor(model => model.LAAttacheacopyofaCCF, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAAttacheacopyofaCCF, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Lab1")</b>
+                                @Html.EditorFor(model => model.LALab1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LALab1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Account Number1")</b>
+                                @Html.EditorFor(model => model.LAAccountNumber1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAAccountNumber1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Pannel1")</b>
+                                @Html.EditorFor(model => model.LAPannel1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAPannel1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("LATPA1")</b>
+                                @Html.EditorFor(model => model.LATPA1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LATPA1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("MRO1")</b>
+                                @Html.EditorFor(model => model.LAMRO1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAMRO1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Sample Type1")</b>
+                                @Html.DropDownListFor(model => model.LASampleType1, TransCanadaDemo.Controllers.LabsController.ListSampleType(), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.LASampleType1, "", new { @class = "text-danger" })
+                         </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Attachment1")</b>
+                                @Html.EditorFor(model => model.LAAttachment1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAAttachment1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("CCFs1")</b>
+                                @Html.DropDownListFor(model => model.LACCFs1, TransCanadaDemo.Controllers.LabsController.ListCCFs(), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.LACCFs1, "", new { @class = "text-danger" })
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Lab2")</b>
+                                @Html.EditorFor(model => model.LALab2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LALab2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Account Number2")</b>
+                                @Html.EditorFor(model => model.LAAccountNumber2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAAccountNumber2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>SAMPLE</legend>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Pannel2")</b>
+                                @Html.EditorFor(model => model.LAPannel2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAPannel2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("LATPA2")</b>
+                                @Html.EditorFor(model => model.LATPA2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LATPA2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("MRO2")</b>
+                                @Html.EditorFor(model => model.LAMRO2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAMRO2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Sample Type2")</b>
+                                @Html.DropDownListFor(model => model.LASampleType2, TransCanadaDemo.Controllers.LabsController.ListsampleType(), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.LASampleType2, "", new { @class = "text-danger" })
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Attachment2")</b>
+                                @Html.EditorFor(model => model.LAAttachment2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAAttachment2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("CCFs2")</b>
+                                @Html.DropDownListFor(model => model.LACCFs2, TransCanadaDemo.Controllers.LabsController.ListCCFS(), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.LACCFs2, "", new { @class = "text-danger" })
+                            </div>
+
+                           
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Lab3")</b>
+                                @Html.EditorFor(model => model.LALab3, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LALab3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("AccountNumber3")</b>
+                                @Html.EditorFor(model => model.LAAccountNumber3, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAAccountNumber3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Pannel3")</b>
+                                @Html.EditorFor(model => model.LAPannel3, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAPannel3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("TPA3")</b>
+                                @Html.EditorFor(model => model.LATPA3, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LATPA3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("MRO3")</b>
+                                @Html.EditorFor(model => model.LAMRO3, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAMRO3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Sample Type3")</b>
+                                @Html.DropDownListFor(model => model.LASampleType3, TransCanadaDemo.Controllers.LabsController.Listsample(), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.LASampleType3, "", new { @class = "text-danger" })
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("Attachment3")</b>
+                                @Html.EditorFor(model => model.LAAttachment3, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LAAttachment3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <b>@Html.DisplayName("CCFs3")</b>
+                                @Html.DropDownListFor(model => model.LACCFs3, TransCanadaDemo.Controllers.LabsController.ListCCF(), new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.LACCFs3, "", new { @class = "text-danger" })
+                            </div>
+                         
+                        </div>
+                    </div>
+
+
+                </div>
+            </fieldset>
+        </form>
+
+            <br />
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    </body>
+</html>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>

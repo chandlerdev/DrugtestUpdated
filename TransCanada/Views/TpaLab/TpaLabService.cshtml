@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TransCanada.Models.TpaLabservice>
+
+@{
+    ViewBag.Title = "TpaLabService";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TpaLabService</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateTpalabService", new { id = ViewBag.LabId })
+</p>
+<table class="table" id="Table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.TPALab_Service_Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TPALab_Id)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Service_Grp_Name)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.TPALab_Service_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TPALab_Id)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Service_Grp_Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UpdateTpaLabService", new { id = item.TPALab_Service_Id }) |
+                    @Html.ActionLink("Delete", "DeleteTlService", new { id = item.TPALab_Service_Id })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<div>
+    @Html.ActionLink("Back to List", "TpaLabList")
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#Table').dataTable({
+        responsive: true
+    });
+
+</script>
+

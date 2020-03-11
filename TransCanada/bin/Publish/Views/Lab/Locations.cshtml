@@ -1,0 +1,84 @@
+﻿@model IEnumerable<TransCanada.Models.lab_location>
+
+@{
+    ViewBag.Title = "Locations";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<h2>Locations-@ViewBag.LabName</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddLab", new { id = @ViewBag.LabName })
+</p>
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Address_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zip)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address_1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address_2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Zip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.ActionLink("Contact", "ContactsList", new { id = item.Id1 })|
+                    @Html.ActionLink("Edit", "UpdateLabLocation", new { id = item.Id1 }) |
+                    @Html.ActionLink("Delete", "deletelabloc", new { id = item.Id1 })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+@Html.ActionLink("Back to LabList", "LabList")
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#table').dataTable({
+        "order": [[3, "asc"]]
+    });
+</script>

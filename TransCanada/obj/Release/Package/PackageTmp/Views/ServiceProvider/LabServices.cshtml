@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TransCanada.Models.Services>
+
+@{
+    ViewBag.Title = "Services";
+}
+
+<h2>Panel Groups</h2>
+<div style="float:right">
+    @Html.ActionLink("Back to Service Provider", "ProviderList")
+</div>
+<p>
+    @Html.ActionLink("Create New", "CreateServiceGroup", new { id = ViewBag.LabName })
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Service_id)
+            </th>*@
+        <th>
+            Panel Group
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Labid)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Service_Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit & Panels", "UpdateServiceGroup", new { id = item.Service_id }) |
+                @Html.ActionLink("Delete", "DeleteServiceGroup", new { id = item.Service_id },new { onclick = "return confirm('Are you sure you want to delete this ?');" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+@Html.ActionLink("Back to Service Provider", "ProviderList")

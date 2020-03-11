@@ -1,0 +1,129 @@
+﻿@model IEnumerable<TransCanada.Models.TcClient>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Client List</h2>
+
+
+@using (Html.BeginForm("List", "Client", FormMethod.Post))
+{
+    <span>Client Name:</span> @Html.TextBox("ClientName")
+    <input type="submit" value="Search" />
+}
+
+@Html.Raw(TempData["msg"])
+
+<p>
+    @Html.ActionLink("Create New", "Create_Client")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientStreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientZip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MainNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationSpecificNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConatctWithANY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountsId)
+        </th>
+        @*
+        <th>
+            @Html.DisplayNameFor(model => model.ShyBladdersLugWithNo)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.ClientSample)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RefusalToTest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatConfirmedPostive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CancelledOrIncompleteTests)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AuthorizationFormsSentVia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DerFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DerJobTitle)
+        </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientStreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientZip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MainNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationSpecificNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConatctWithANY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountsId)
+        </td>
+        @*
+        <td>
+            @Html.DisplayFor(modelItem => item.ShyBladdersLugWithNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientSample)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefusalToTest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BatConfirmedPostive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CancelledOrIncompleteTests)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AuthorizationFormsSentVia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DerFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DerJobTitle)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit_Client", new { mainnumber = item.MainNumber }) |
+            @Html.ActionLink("Details", "Detail_Client", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete_Client", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+    }
+
+</table>

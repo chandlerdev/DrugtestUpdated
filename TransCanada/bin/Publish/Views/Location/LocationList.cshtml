@@ -1,0 +1,582 @@
+﻿@model IEnumerable<TransCanadaDemo.Models.Location_Model>
+
+@{
+    ViewBag.Title = "LocationList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Location List</h2>
+<meta name="viewport" content="width=device-width" />
+
+<title>ShowGrid</title>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="table-responsive">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="Table" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.Location_Id)
+                    </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_LocationName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_StreetAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_City)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_State)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_Zip)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_Main_Number)
+                    </th>
+                    @*<th>
+                        @Html.DisplayNameFor(model => model.Locations_Notes)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ConatctWithANY)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ShyBladdersLugWithNo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ClientSample)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RefusalToTest)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BatConfirmedPostive)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CancelledOrIncompleteTests)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AuthorizationFormsSentVia)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contact_FullName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contact_JobTitle)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contact_OfficeNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contact_CellPhone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contact_Fax)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Contact_Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_i3ScreenAccess)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_BackgroundScreeningAccess)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Locations_OccupationalMedicineAccess)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactFullName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactOfficeNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactFax)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactEmail)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactStreetAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactCity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactState)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactZip)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactEmailInvoices)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactNotes)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingContactBillingOptions)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccAttacheCopyCCF)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccLab1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccAccountNumber1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccPannel)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccTpa1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccMro1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccSampleType1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccAttachment1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccCcf1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccLab2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccAccountNumber2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccPannel2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccTpa2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccMro2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccSampleType2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccAttachment2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccCcf2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccLab3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccAccountNumber3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccPannel3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccTpa3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccMro3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccSampleType3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccAttachment3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LabAccCcf3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ServicesProvided)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPPreEmployment)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPBackgroundPackagePreEmploy)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPRandom)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPPostAccident)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPReasonableSuspicion)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPFollowUp)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPReturntoDuty)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPAnnual)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPBackgroundPackageAnnual)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SPNegativeDilute)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RPTPoolName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RPTPoolType)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RPTOwner)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RPTPoolManager)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RPTOwnerType)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RPTdotnondot)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RPTdotagency)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPAlcoholGetsDrug)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPSelectionLevelforDrug)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPPercent1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPSelectionLevelforAlcohol)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPPercent2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPAlternatesforDrug)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPPercent3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPAlternatesforAlcohol)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPPercent4)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RTPNotes)
+                    </th>*@
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.Location_Id)
+                        </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_LocationName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_StreetAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_City)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_State)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_Zip)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_Main_Number)
+                        </td>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.Locations_Notes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ConatctWithANY)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ShyBladdersLugWithNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ClientSample)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RefusalToTest)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BatConfirmedPostive)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CancelledOrIncompleteTests)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AuthorizationFormsSentVia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contact_FullName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contact_JobTitle)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contact_OfficeNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contact_CellPhone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contact_Fax)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Contact_Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_i3ScreenAccess)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_BackgroundScreeningAccess)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locations_OccupationalMedicineAccess)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactFullName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactOfficeNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactFax)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactEmail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactStreetAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactCity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactState)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactZip)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactEmailInvoices)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactNotes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BillingContactBillingOptions)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccAttacheCopyCCF)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccLab1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccAccountNumber1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccPannel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccTpa1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccMro1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccSampleType1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccAttachment1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccCcf1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccLab2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccAccountNumber2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccPannel2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccTpa2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccMro2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccSampleType2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccAttachment2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccCcf2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccLab3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccAccountNumber3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccPannel3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccTpa3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccMro3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccSampleType3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccAttachment3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LabAccCcf3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ServicesProvided)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPPreEmployment)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPBackgroundPackagePreEmploy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPRandom)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPPostAccident)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPReasonableSuspicion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPFollowUp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPReturntoDuty)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPAnnual)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPBackgroundPackageAnnual)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SPNegativeDilute)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RPTPoolName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RPTPoolType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RPTOwner)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RPTPoolManager)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RPTOwnerType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RPTdotnondot)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RPTdotagency)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPAlcoholGetsDrug)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPSelectionLevelforDrug)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPPercent1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPSelectionLevelforAlcohol)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPPercent2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPAlternatesforDrug)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPPercent3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPAlternatesforAlcohol)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPPercent4)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RTPNotes)
+                        </td>*@
+                        <td>
+                            @Html.ActionLink("Edit", "UpdateLocation", new { id=item.Location_Id }) |
+                            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                            @Html.ActionLink("Delete", "Deletelocatoin", new { id=item.Location_Id })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#Table').dataTable({
+        "responsive": true
+    });
+
+</script>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TransCanada.Models.LookUp>
+
+@{
+    ViewBag.Title = "ListTitle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Title List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateTitle")
+</p>
+<table class="table">
+    <tr>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditTitle", new { id=item.Id }) |
+            
+            @Html.ActionLink("Delete", "DeleteTitle", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

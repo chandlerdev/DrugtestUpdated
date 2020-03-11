@@ -1,0 +1,64 @@
+﻿@model IEnumerable<TransCanada.Models.AspNetAccountsModel>
+
+@{
+    ViewBag.Title = "AccountsList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Company List</h2>
+
+@Html.ActionLink("Add Company","InsertAccounts")
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Company")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoImage)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </th>*@
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountId)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.LogoImage)*@
+            <img src="../../Images/@Url.Content(item.LogoImage)" style="width:100px;height:100px" alt=item.LogoImage />
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedDate)
+        </td>*@
+       
+        <td>
+            @Html.ActionLink("Edit", "UpdateAccounts", new {id=item.AccountId_PK }) |
+            @Html.ActionLink("Delete", "DeleteAccounts", new { id=item. AccountId_PK})
+        </td>
+    </tr>
+}
+
+</table>

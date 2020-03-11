@@ -1,0 +1,219 @@
+﻿@model IEnumerable<TransCanada.Models.Lead>
+
+@{
+    ViewBag.Title = "Leadlist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lead list</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateLead")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            Prospect Name
+            @*@Html.DisplayNameFor(model => model.Client_Name)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact_FirstName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Contact_LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Second_Contact_First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Second_Contact_Last_Name)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opportunity_Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lead_Email_Ref)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NDA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Priority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zip_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Website)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Received_on)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lead_Source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lead_Received_Via)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proposal_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lead_Eligibility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Next_Follow_Up)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lead_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sales_Manager)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sales_Person)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>*@
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Client_Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contact_FirstName)
+    </td>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Contact_LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Second_Contact_First_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Second_Contact_Last_Name)
+        </td>*@
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Phone)
+    </td>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opportunity_Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead_Email_Ref)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NDA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Priority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zip_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Website)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Received_on)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead_Source)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead_Received_Via)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proposal_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead_Eligibility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Next_Follow_Up)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sales_Manager)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sales_Person)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>*@
+    <td>
+        @Html.ActionLink("Edit", "UpdateLead", new { id = item.Id }) 
+    </td>
+</tr>
+}
+
+</table>

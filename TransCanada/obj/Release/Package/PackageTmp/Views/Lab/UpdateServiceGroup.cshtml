@@ -1,0 +1,71 @@
+﻿@model TransCanada.Models.Services
+
+@{
+    ViewBag.Title = "UpdateServiceGroup";
+}
+
+<h2> @TempData["Lab_product_service"]->Panel</h2>
+@{
+    TempData.Keep("LabNameforservices");
+    TempData.Keep("Lab_product_service");
+}
+@*<div style="float:right">
+    @Html.ActionLink("Back to List", "Labservices", new { id = Model.Labid })
+</div>*@
+
+
+
+<br />
+@*@Html.ActionLink("Add Panel", "CreateSubService", new { id = Model.Service_id })*@
+<br />
+<br />
+<table class="table" id="Table">
+    <thead>
+        <tr>
+
+            <th>
+                Panel
+            </th>
+            <th>
+                Panel Description
+            </th>
+            <th>
+                Purchase Cost With MRO
+            </th>
+            <th>
+                Billing Cost
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in ViewData["Data"] as List<TransCanada.Models.SubServices>)
+        {
+            <tr>
+                <td>@item.lab_services_description</td>
+                <td>@item.lab_services_ext_description</td>
+                <td>@item.service_charges</td>
+                <td>@item.Billing_Price</td>
+                <td>@Html.ActionLink("Edit", "UpdateSubService", new { id = item.lab_service_id })</td>
+                <td>@Html.ActionLink("Delete", "DeleteSubService", new { id = item.lab_service_id }, new { onclick = "return confirm('Are you sure you want to delete this ?');" })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    @Html.ActionLink("Back to List", "Labservices", new { id = Model.Labid })
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#Table').dataTable({
+        responsive: true
+    });
+
+
+</script>

@@ -1,0 +1,810 @@
+﻿@model TransCanada.Models.Lead
+
+@{
+    ViewBag.Title = "UpdateLead";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <script src="~/Scripts/popper.min.js"></script>
+    <style>
+        textarea {
+            overflow: auto;
+            vertical-align: top;
+            width: 30%;
+            height: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/style.css">
+</head>
+<h2> Update Lead</h2>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div style="float:left">
+    @Html.ActionLink("Back to List", "Leadlist")
+</div>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+<div class="container">
+    <div class="lead-call-btn">
+        <button type="button" class="btn btn-primary newcall" data-toggle="modal" data-target="#exampleModal">
+            New Call
+        </button>
+        <!-- Modal -->
+        <div class="modal fade lead-modal" id="exampleModal" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title lead-call" id="exampleModalLabel"> Call Log</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"> &times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body lead-modal-body">
+
+                        <div class=" text-center">
+                            <div id="timer"> 00:00</div>
+                            <button id="start" onclick="enableend()"> Begin Call</button>
+
+                            <button id="stop" onclick="endcall()"> End</button>
+                        </div>
+
+                        <form class="needs-validation lead-table-popup" novalidate>
+                            <div class="row">
+
+                                <table class="table  lead-table">
+
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p class="first-para-company"> Prospect Name: </p>
+                                                <p class="second-para-company" id="call-clientname"> </p>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                <p class="first-para"> First Name: </p>
+                                                <p class="second-para" id="call-firstname"> </p>
+                                            </td>
+                                            <td>
+                                                <p class="first-para"> Last Name: </p>
+                                                <p class="second-para" id="call-lastname"> </p>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="first-para"> Email: </p>
+                                                <p class="second-para" id="call-email"> </p>
+                                            </td>
+                                            <td>
+                                                <p class="first-para"> Phone: </p>
+                                                <p class="second-para" id="call-phone"> </p>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <div class="col-md-6 col-sm-12 col-xl-6">
+                                    <div class="form-group">
+                                        <label for="sel1"> Call Status:</label>
+                                        <select class="form-control" id="status">
+                                            <option value=""> Select</option>
+                                            <option value="Call Back After Lunch"> Call Back After Lunch</option>
+                                            <option value="Call Later - Follow up"> Call Later - Follow up</option>
+                                            <option selected="selected" value="Follow Up"> Follow Up</option>
+                                            <option value="In a Meeting"> In a Meeting </option>
+                                            <option value="In-house web development"> In-house web development </option>
+                                            <option value="Interested"> Interested</option>
+                                            <option value="Never Called"> Never Called </option>
+                                            <option value="No Longer in Business"> No Longer in Business </option>
+                                            <option value="Not a Working Number"> Not a Working Number </option>
+                                            <option value="Not in office"> Not in office</option>
+                                            <option value="Not interested"> Not interested</option>
+                                            <option value="Not into Marketing"> Not into Marketing </option>
+                                            <option value="Rude"> Rude </option>
+                                            <option value="Voice Mail"> Voice Mail</option>
+                                            <option value="Completed"> Completed </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xl-6">
+                                    <div class="form-group">
+                                        <label for="sel1"> Follow Up Date:</label>
+                                        <input type="date" class="form-control" id="followdate">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xl-6">
+                                    <div class="form-group">
+                                        <label for="sel1"> Follow Up Time:</label>
+                                        <select class="form-control" id="followuptime">
+                                            <option selected="selected" value="9.00"> 9.00</option>
+                                            <option value="9.15"> 9.15</option>
+                                            <option value="9.30"> 9.30</option>
+                                            <option value="9.45"> 9.45</option>
+                                            <option value="10.00"> 10.00</option>
+                                            <option value="10.15"> 10.15</option>
+                                            <option value="10.30"> 10.30</option>
+                                            <option value="10.45"> 10.45</option>
+                                            <option value="11.00"> 11.00</option>
+                                            <option value="11.15"> 11.15</option>
+                                            <option value="11.30"> 11.30</option>
+                                            <option value="11.45"> 11.45</option>
+                                            <option value="12.00"> 12.00</option>
+                                            <option value="12.15"> 12.15</option>
+                                            <option value="12.30"> 12.30</option>
+                                            <option value="12.45"> 12.45</option>
+                                            <option value="13.00"> 13.00</option>
+                                            <option value="13.15"> 13.15</option>
+                                            <option value="13.30"> 13.30</option>
+                                            <option value="13.45"> 13.45</option>
+                                            <option value="14.00"> 14.00</option>
+                                            <option value="14.15"> 14.15</option>
+                                            <option value="14.30"> 14.30</option>
+                                            <option value="14.45"> 14.45</option>
+                                            <option value="15.00"> 15.00</option>
+                                            <option value="15.15"> 15.15</option>
+                                            <option value="15.30"> 15.30</option>
+                                            <option value="15.45"> 15.45</option>
+                                            <option value="16.00"> 16.00</option>
+                                            <option value="16.15"> 16.15</option>
+                                            <option value="16.30"> 16.30</option>
+                                            <option value="16.45"> 16.45</option>
+                                            <option value="17.00"> 17.00</option>
+                                            <option value="17.15"> 17.15</option>
+                                            <option value="17.30"> 17.30</option>
+                                            <option value="17.45"> 17.45</option>
+                                            <option value="18.00"> 18.00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xl-6">
+                                    <div class="form-group">
+                                        <label for="sel1">
+                                            Remainder Date:
+                                        </label>
+                                        <input type="date" class="form-control" id="reminderdate">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xl-6">
+                                    <div class="form-group">
+                                        <label for="sel1"> Remainder Time:</label>
+                                        <select class="form-control" id="remindertime">
+                                            <option selected="selected" value="9.00"> 9.00</option>
+                                            <option value="9.15"> 9.15</option>
+                                            <option value="9.30"> 9.30</option>
+                                            <option value="9.45"> 9.45</option>
+                                            <option value="10.00"> 10.00</option>
+                                            <option value="10.15"> 10.15</option>
+                                            <option value="10.30"> 10.30</option>
+                                            <option value="10.45"> 10.45</option>
+                                            <option value="11.00"> 11.00</option>
+                                            <option value="11.15"> 11.15</option>
+                                            <option value="11.30"> 11.30</option>
+                                            <option value="11.45"> 11.45</option>
+                                            <option value="12.00"> 12.00</option>
+                                            <option value="12.15"> 12.15</option>
+                                            <option value="12.30"> 12.30</option>
+                                            <option value="12.45"> 12.45</option>
+                                            <option value="13.00"> 13.00</option>
+                                            <option value="13.15"> 13.15</option>
+                                            <option value="13.30"> 13.30</option>
+                                            <option value="13.45"> 13.45</option>
+                                            <option value="14.00"> 14.00</option>
+                                            <option value="14.15"> 14.15</option>
+                                            <option value="14.30"> 14.30</option>
+                                            <option value="14.45"> 14.45</option>
+                                            <option value="15.00"> 15.00</option>
+                                            <option value="15.15"> 15.15</option>
+                                            <option value="15.30"> 15.30</option>
+                                            <option value="15.45"> 15.45</option>
+                                            <option value="16.00"> 16.00</option>
+                                            <option value="16.15"> 16.15</option>
+                                            <option value="16.30"> 16.30</option>
+                                            <option value="16.45"> 16.45</option>
+                                            <option value="17.00"> 17.00</option>
+                                            <option value="17.15"> 17.15</option>
+                                            <option value="17.30"> 17.30</option>
+                                            <option value="17.45"> 17.45</option>
+                                            <option value="18.00"> 18.00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xl-6">
+                                    <div class="form-group">
+
+                                        <label for="sel1">
+                                            Remainder by:
+                                        </label>
+                                        <select class="form-control" id="reminderby">
+                                            <option selected="selected" value="Call"> Call</option>
+                                            <option value="Email"> Email</option>
+                                            <option value="Meeting"> Meeting</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xl-12">
+                                    <div class="form-group">
+
+                                        <label for="sel1">
+                                            Notes:
+                                        </label>
+                                        <textarea class="lead-textarea" id="notes"> </textarea>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xl-12">
+                                    <div class="form-group">
+
+                                        <label for="sel1">
+                                            Previous Notes:
+                                        </label>
+                                        <textarea class="lead-textarea" id="prevnotes"> </textarea>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        <div class="form-group">
+            <label class="control-label col-md-2">Prospect Name</label>
+            @*@Html.LabelFor(model => model.Client_Name, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Client_Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Client_Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contact_FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Contact_FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Contact_FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contact_LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Contact_LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Contact_LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Second_Contact_First_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Second_Contact_First_Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Second_Contact_First_Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Second_Contact_Last_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Second_Contact_Last_Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Second_Contact_Last_Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" ,@type="number" } })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; @Html.EditorFor(model => model.IsActive)
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Opportunity_Notes, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Opportunity_Notes, new { htmlAttributes = new { @class = "form-control" } })
+                <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                @Html.ValidationMessageFor(model => model.Opportunity_Notes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lead_Email_Ref, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Lead_Email_Ref, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Lead_Email_Ref, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NDA, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; @Html.EditorFor(model => model.NDA)
+                    @Html.ValidationMessageFor(model => model.NDA, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Priority, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Priority, TransCanada.Controllers.LeadCtlController.Prioritylist(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Priority, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.State, TransCanadaDemo.Controllers.ClientController.ListClientState(), "--SELECT--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Zip_Code, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Zip_Code, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Zip_Code, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mobile_Number, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Mobile_Number, new { htmlAttributes = new { @class = "form-control"  ,@type="number"} })
+                @Html.ValidationMessageFor(model => model.Mobile_Number, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fax_Number, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fax_Number, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Fax_Number, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Website, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Website, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Website, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Received_on, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Received_on, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Received_on, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Customer_Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Customer_Status, TransCanada.Controllers.LeadCtlController.ListCustomerStatus(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Customer_Status, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lead_Source, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Lead_Source, TransCanada.Controllers.LeadCtlController.ListLeadSource(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Lead_Source, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lead_Received_Via, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <table>
+                    <tr>
+                        <td>
+                            @Html.RadioButtonFor(m => m.Lead_Received_Via, "Phone") Phone
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.RadioButtonFor(m => m.Lead_Received_Via, "Call") Call
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.RadioButtonFor(m => m.Lead_Received_Via, "Email") Email
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.RadioButtonFor(m => m.Lead_Received_Via, "Text") Text
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Proposal_Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <table>
+                    <tr>
+                        <td>
+                            @Html.RadioButtonFor(m => m.Proposal_Status, "Awarded") Awarded
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.RadioButtonFor(m => m.Proposal_Status, "Lost") Lost
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lead_Eligibility, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Lead_Eligibility, TransCanada.Controllers.LeadCtlController.ListLeadEligible(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Lead_Eligibility, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @if (Model.Lead_Eligibility == "1")
+        {
+            <div class="form-group">
+                <label class="control-label col-md-2"> Create Or Update Client</label>
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <td>
+                                <label> <input type="checkbox" value="" id="ckk1"> Create/Update Client & Location & Contact</label>
+                            </td>
+                        </tr>
+                        @*<tr>
+                                <td>
+                                    <label><input type="checkbox" value="" id="chk2">Update Client  & Location & Contact</label>
+                                </td>
+                            </tr>*@
+                    </table>
+                </div>
+
+            </div>
+        }
+        <div class="form-group">
+            @Html.LabelFor(model => model.Next_Follow_Up, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Next_Follow_Up, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Next_Follow_Up, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lead_Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Lead_Status, TransCanada.Controllers.LeadCtlController.ListLeadStatus(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Lead_Status, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sales_Manager, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Sales_Manager, TransCanada.Controllers.LeadCtlController.ListSalesManager(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Sales_Manager, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sales_Person, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Sales_Person, TransCanada.Controllers.LeadCtlController.ListSalesPerson(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Sales_Person, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Notes, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+                <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+            </div>
+            @Html.Partial("popup")
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+<h3> Call History</h3>
+<br />
+<br />
+<div id="exTab2" class="container">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#1" data-toggle="tab"> Call History</a>
+        </li>
+        <li>
+            <a href="#2" data-toggle="tab"> Follow Up</a>
+        </li>
+
+    </ul>
+
+    <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+            <table class="table" id="Table">
+                <thead>
+                    <tr>
+                        <th>
+                            Last Call On
+                        </th>
+                        <th>
+                            Duration
+                        </th>
+                        <th>
+                            Call Status
+                        </th>
+                        <th>
+                            Follow Up Date
+                        </th>
+                        <th>
+                            Follow Up Time
+                        </th>
+                        <th>
+                            Reminder Date
+                        </th>
+                        <th> Reminder Time</th>
+                        <th> Reminder By</th>
+                        <th> Notes</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewData["Data"] as List<TransCanada.Models.Callhist>)
+                    {
+                        <tr>
+                            <td>@item.Last_Call_on.ToShortDateString() </td>
+                            <td>@item.Duration </td>
+                            <td>@item.call_status </td>
+                            <td>@item.followupdate.ToShortDateString() </td>
+                            <td>@item.followuptime </td>
+                            <td>@item.reminderdate.ToShortDateString() </td>
+                            <td>@item.remindertime </td>
+                            <td>@item.remainder_by </td>
+                            <td>@item.Notes </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="2">
+            <table class="table" id="Table1">
+                <thead>
+                    <tr>
+
+                        <th>
+                            Follow Up Date
+                        </th>
+                        <th>
+                            Follow Up Time
+                        </th>
+                        <th>
+                            Reminder Date
+                        </th>
+                        <th> Reminder Time</th>
+                        <th> Reminder By</th>
+                        <th> Notes</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewData["Data_follow"] as List<TransCanada.Models.Callhist>)
+                    {
+                        <tr>
+
+                            <td>@item.followupdate.ToShortDateString() </td>
+                            <td>@item.followuptime </td>
+                            <td>@item.reminderdate.ToShortDateString() </td>
+                            <td>@item.remindertime </td>
+                            <td>@item.remainder_by </td>
+                            <td>@item.Notes </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Leadlist")
+</div>
+<script src="~/Scripts/timer.js"></script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/popup.js"></script>
+
+<script>
+
+    $('#Table').dataTable({
+        responsive: true,
+        "order": [[0, "desc"]]
+    });
+    $('#ckk1').change(function () {
+        if (this.checked) {
+            var id = $("#Id").val();
+            $.ajax({
+                data: { 'id': id },
+                type: 'POST',
+                dataType: 'json',
+                url: '/LeadCtl/LeadtoClient',
+                success: function (result) {
+                    if (result == "Success")
+                        alert("Completed Successfully")
+                    else
+                        alert('We face some technical difficulties');
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+        }
+    });
+    $(document).ready(function () {
+
+        $("#stop").attr("disabled", true);
+        $('#exampleModal').on('hidden.bs.modal', function () {
+            location.reload(true);
+        })
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("followdate").value = today;
+        document.getElementById("reminderdate").value = today;
+        document.getElementById("call-clientname").innerHTML = document.getElementById("Client_Name").value;
+        document.getElementById("call-firstname").innerHTML = document.getElementById("Contact_FirstName").value;
+        document.getElementById("call-lastname").innerHTML = document.getElementById("Contact_LastName").value;
+        document.getElementById("call-email").innerHTML = document.getElementById("Email").value;
+        document.getElementById("call-phone").innerHTML = document.getElementById("Phone").value;
+        var Loc_id = $("#Id").val();
+        $.ajax({
+            data: { 'id': Loc_id },
+            type: 'POST',
+            dataType: 'json',
+            url: '/LeadCtl/PrevNotes',
+            success: function (result) {
+
+                $.each(result, function (i, item) {
+                    $('#prevnotes').append(item + '\n');
+                });
+
+            },
+            error: function (ex) {
+                alert('We face some technical difficulties');
+            }
+        });
+        $("#Lead_Eligibility").change(function () {
+
+
+
+        });
+    });
+    function enableend() {
+        $("#stop").attr("disabled", false);
+    }
+    function endcall() {
+        var id = $("#Id").val();
+        var timeend = document.getElementById("timer").innerText;
+        var followupdate = document.getElementById("followdate").value;
+        var followuptime = document.getElementById("followuptime").value
+        var status = document.getElementById("status").value;
+        var reminderby = document.getElementById("reminderby").value;
+        var reminderdate = document.getElementById("reminderdate").value;
+        var remindertime = document.getElementById("remindertime").value;
+        var notes = document.getElementById("notes").value;
+        var model = {
+            leadid: id,
+            call_status: status,
+            followupdate: followupdate,
+            followuptime: followuptime,
+            reminderdate: reminderdate,
+            remindertime: remindertime,
+            remainder_by: reminderby,
+            Notes: notes,
+            Duration: timeend
+        };
+        $.ajax({
+            data: { 'callhist': model },
+            type: 'POST',
+            dataType: 'json',
+            url: '/LeadCtl/Newcall',
+            success: function (result) {
+                if (result == "Newcallreg")
+                    location.reload(true)
+                else
+                    alert('We face some technical difficulties');
+
+            },
+            error: function (ex) {
+                alert('We face some technical difficulties');
+            }
+        });
+    }
+</script>
+

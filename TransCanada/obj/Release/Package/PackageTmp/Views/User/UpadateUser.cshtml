@@ -1,0 +1,83 @@
+﻿@model TransCanada.Models.userViewmodel
+
+@{
+    ViewBag.Title = "UpadateUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Upadate User</h2>
+<div style="float:right">
+    @Html.ActionLink("Back to List", "UserList")
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @*<b>@Html.DisplayName("Company Name")</b>*@    
+            @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.username,new { @class = "form-control",@readonly="readonly" } )
+                @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.Accounts_Id, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <b class="control-label col-md-2">@Html.DisplayName("Clients for User")</b>
+           
+            <div class="col-md-10">
+                <input type="checkbox" id="check-all" /><span>Select All</span><br />
+                @for (int i = 0; i < Model.Accounts_Id.Count; i++)
+                {
+
+                    @Html.CheckBoxFor(m => Model.Accounts_Id[i].IsChecked)
+                    @Model.Accounts_Id[i].Value
+                    @Html.HiddenFor(m => Model.Accounts_Id[i].Value)
+                    @Html.HiddenFor(m => Model.Accounts_Id[i].Value)<br />
+
+                }
+            </div>
+        </div>
+            <div class="form-group">
+                
+                    @*@Html.LabelFor(model => model.roleid, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                <b class="control-label col-md-2">@Html.DisplayName("User Role")</b>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(m => m.roleid, new SelectList(Model.Category1, "Id", "Name"), "Select Roles")
+                    @*@Html.DropDownListFor(m => m.Category1, new SelectList(Model.roleid, "Id", "UserName"), "Select User")*@
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "UserList")
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#check-all').change(function () {
+            if (this.checked) {
+                var checkboxes = document.getElementsByTagName('input');
+
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].type == 'checkbox') {
+                        checkboxes[i].checked = true;
+                    }
+                }
+            }
+
+        });
+    });
+</script>

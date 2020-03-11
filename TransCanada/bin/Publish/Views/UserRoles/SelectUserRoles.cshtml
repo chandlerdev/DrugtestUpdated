@@ -1,0 +1,53 @@
+﻿@model TransCanada.Models.AspNetUserRoles
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SelectUserRoles</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Select Roles :
+                </td>
+                <td>
+
+                    @Html.DropDownListFor(m => m.Category, new SelectList(Model.Category, "Id", "Name"), "Select Roles")
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select User :
+                </td>
+                <td>
+                    @Html.DropDownListFor(m => m.Users, new SelectList(Model.Users, "Id", "UserName"), "Select User")
+
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" /> <input type="submit" value="Cancel" class="btn btn-default" />
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+</html>

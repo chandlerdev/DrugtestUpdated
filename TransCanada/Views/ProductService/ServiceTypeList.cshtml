@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TransCanada.Models.ServiceProd>
+
+@{
+    ViewBag.Title = "ServiceTypeList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Product and Services List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddServiceType")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.LabType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.LabType)
+        </td>
+        <td>
+            @Html.ActionLink("Panels", "UpdateServiceType", new { id=item.Id }) |
+          
+            @Html.ActionLink("Delete", "DeleteServiceType", new { id=item.Id }, new { onclick = "return confirm('Are you sure you want to delete this ?');" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,213 @@
+﻿@model IEnumerable<TransCanadaDemo.Models.iThreeScreen>
+
+@{
+    ViewBag.Title = "iThreeScreen";
+}
+
+<h2>iThreeScreen</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BillToCustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BillTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerOfId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerOf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonorCCF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonorFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonorLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReasonForTest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceivedFromLab)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LabAccountNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lab)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Program)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpecimenType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PanelType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Panel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionSite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionSiteType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeeAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManuallyEntered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GLAccount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdditionalNotes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BillToCustomerId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BillTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerOfId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerOf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CaseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonorCCF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonorFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonorLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReasonForTest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceivedFromLab)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LabAccountNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lab)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Program)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpecimenType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PanelType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Panel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionSiteType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FeeAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManuallyEntered)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GLAccount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdditionalNotes)
+        </td>
+    </tr>
+}
+
+</table>

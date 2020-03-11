@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNet.Identity
+<style>
+    .labellay {
+        margin-top: 7px;
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+    }
+</style>
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        if (System.Web.HttpContext.Current.Session["Account_id"] != null)
+        {
+
+<label class="labellay">@Session["Account_id"].ToString()</label>   
+
+                @*<img src="../../Images/@System.Web.HttpContext.Current.Session["Logo_path"].ToString()" width="200px" height="60px" alt="TransCanada" />*@
+                }
+<ul class="nav navbar-nav navbar-right">
+    @if (System.Web.HttpContext.Current.Session["Account_id"] != null)
+    {
+    <li><a href="/Home/Account_List"><label>Change Client</label></a></li>
+    }
+    <li>
+        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+    </li>
+    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+</ul>
+                }
+                }
+                else
+                {
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                </ul>
+                }

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<TransCanada.Models.AspNetAccountsModel>
+
+@{
+    ViewBag.Title = "AccountsList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+<h2>Client List</h2>
+
+@Html.ActionLink("Add Client", "InsertAccounts")
+<table class="table" id="Table">
+<thead>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Client")
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LogoImage)
+                    </th>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.CreatedBy)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreatedDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UpdatedBy)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UpdatedDate)
+                        </th>*@
+
+                    <th></th>
+                </tr>
+          </thead>
+		  <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AccountId)
+                        </td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.LogoImage))
+                            {
+                                @*@Html.DisplayFor(modelItem => item.LogoImage)*@
+                                <img src="../../Images/@Url.Content(item.LogoImage)" style="width:100px;height:100px" alt=item.LogoImage />
+                            }
+                        </td>
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.CreatedBy)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CreatedDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UpdatedBy)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UpdatedDate)
+                            </td>*@
+
+                    <td>
+                        @Html.ActionLink("Assign Labs&SP", "ClientLabSP", "ClientLab", new { id = item.AccountId_PK, rtn = "acc" }, null) |
+                        @Html.ActionLink("Assign Cost", "Panels", "PanelPrice", new { id = item.AccountId_PK }, null) |
+                        @Html.ActionLink("Location&Contacts", "Locations", "Location", new { id = item.AccountId.Trim() }, null)|
+                        @Html.ActionLink("Edit", "UpdateAccounts", new { id = item.AccountId_PK }) |
+                        @Html.ActionLink("Delete", "DeleteAccounts", new { id = item.AccountId_PK }, new { onclick = "return confirm('Are you sure you want to delete this ?');" })
+
+                    </td>
+                    </tr>
+                }
+        </tbody>
+        </table>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+    $('#Table').dataTable({
+        responsive: true
+    });
+
+</script>

@@ -1,0 +1,166 @@
+﻿@model IEnumerable<TransCanada.Models.Service_provider>
+
+@{
+    ViewBag.Title = "ProviderList";
+}
+
+<h2>Provider List</h2>
+<meta name="viewport" content="width=device-width" />
+
+<title>Provider List</title>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+
+<p>
+    @Html.ActionLink("Add Provider", "CreateProvider")
+</p>
+<div class="table-responsive">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="Table" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Serviceprovider_id)
+                    </th>*@
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Createdby)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Updatedby)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Createdon)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Updatedon)
+                    </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Serviceprovider_Name)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Contact_Person)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Fax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WebSite)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cities)
+                </th>*@
+            <th>Action</th>
+            </tr>
+                </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.Serviceprovider_id)
+                        </td>*@
+                        @*<td>
+                    @Html.DisplayFor(modelItem => item.Createdby)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Updatedby)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Createdon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Updatedon)
+                </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Serviceprovider_Name)
+                        </td>
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.Contact_Person)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address_1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Address_2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.City)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.State)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Zip)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Phone)
+                        </td>*@
+                        @*<td>
+                    @Html.DisplayFor(modelItem => item.Fax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WebSite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cities)
+                </td>*@
+                    <td>
+                        @*@Html.ActionLink("Edit", "UpdateProvider", new { id = item.Serviceprovider_id })*@
+                        @Html.ActionLink("Location", "SpLocations", new { id = item.Serviceprovider_Name })
+                        @*@Html.ActionLink("Panel Groups", "LabServices", new { id = item.Serviceprovider_id })*@
+                        @Html.ActionLink("Edit", "UpdateProvider", new { id = item.Serviceprovider_id })
+                        @Html.ActionLink("Delete", "DeleteProvider", new { id = item.Serviceprovider_id },new { onclick = "return confirm('Are you sure you want to delete this ?');" })
+
+                    </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+    </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+        <script>
+
+            $('#Table').dataTable({
+                "responsive": true
+            });
+
+        </script>
+        

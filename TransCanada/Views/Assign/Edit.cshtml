@@ -1,0 +1,143 @@
+﻿@model TransCanada.Models.Employeetolab
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Employeetolab</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.EmployeeName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.EmployeeName, Model.EmployeeNameList, "--SELECT--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EmployeeName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Labname, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Labname, Model.LabNameList, "--SELECT--", new { @class = "form-control" })
+
+            @Html.ValidationMessageFor(model => model.Labname, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.State, Model.StateList, "--SELECT--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Location, Model.LocationList, "--SELECT--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Address, Model.AddressList, "--SELECT--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.id)
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "EmployeetoLab")
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#State").change(function () {
+            var Statecode = $("#Labname").val();
+            var state = $("#State").val();
+            $.ajax({
+                data: { 'Statecode': Statecode, 'state': state },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Assign/GetCities',
+                success: function (result) {
+                    $("#Location").empty();
+                    document.getElementById("Location").disabled = false;
+                    $("#Location").append('<option value="">Select Location</option>');
+                    $.each(result, function (i, item) {
+                        $("#Location").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alertify.alert('We face some technical difficulties');
+                }
+            });
+        });
+        $("#Labname").change(function () {
+            var Statecode = $("#Labname").val();
+            $.ajax({
+                data: {'Statecode':Statecode},
+                type: 'POST',
+                dataType: 'json',
+                url: '/Assign/GetState',
+                success: function (result) {
+                    $("#State").empty();
+                    document.getElementById("State").disabled = false;
+                    $("#State").append('<option value="">Select State</option>');
+                    $.each(result, function (i, item) {
+                        $("#State").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alertify.alert('We face some technical difficulties');
+                }
+            });
+
+        });
+        $("#Location").change(function () {
+            var Statecode = $("#Labname").val();
+            var state = $("#State").val();
+            var loc = $(this).val();
+            $.ajax({
+                data: { 'Statecode': Statecode, 'state': state,'loc':loc},
+                type: 'POST',
+                dataType: 'json',
+                url: '/Assign/GetAddress',
+                success: function (result) {
+                     $("#Address").empty();
+                    document.getElementById("Address").disabled = false;
+                    $("#Address").append('<option value="">Select State</option>');
+                    $.each(result, function (i, item) {
+                        $("#Address").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alertify.alert('We face some technical difficulties');
+                }
+            });
+        });
+    });
+</script>

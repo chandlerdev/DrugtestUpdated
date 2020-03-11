@@ -1,0 +1,114 @@
+﻿@model TransCanada.Models.ProductSubservice
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ProductSubservice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Lab_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lab_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Product_service_grp_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product_service_grp_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lab_services_description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lab_services_description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lab_services_ext_description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lab_services_ext_description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.service_charges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.service_charges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lab_group_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lab_group_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.client_billing_charges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.client_billing_charges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specimen_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specimen_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drugs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drugs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medical_Review_Office_Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medical_Review_Office_Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendor_management)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vendor_management)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Document_Upload)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Document_Upload)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

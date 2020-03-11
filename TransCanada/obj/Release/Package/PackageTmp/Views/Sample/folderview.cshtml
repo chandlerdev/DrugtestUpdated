@@ -1,0 +1,37 @@
+﻿
+@model IEnumerable<FileInfo>
+<style>
+
+.container {
+ width:100%;
+}
+.allign{
+width:50%;
+}
+table{
+    margin-bottom:50px;
+}
+</style>
+<h1>Files</h1>
+<div class="container">
+    @foreach (var item in Model)
+    {
+    <div class="allign">
+        <table>
+
+
+            <tr>
+                <td>
+
+                    <embed src="../Images/@item.Name" width="500" height="400" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+
+    }
+</div>
+
+   

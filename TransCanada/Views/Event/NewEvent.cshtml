@@ -1,0 +1,1292 @@
+﻿@model TransCanada.Models.Event_Model
+
+@{
+    ViewBag.Title = "NewEvent";
+    Layout = null;
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet" type="text/css" />
+<link href="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Drug Test</title>
+
+
+    @*<title><img src="images/Logo_TransCanada.png" alt="TransCanada" /></title>*@
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <style>
+          .labellay {
+        margin-top: 7px;
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: white;
+        font-size: 25px;
+    }
+        .navbar-inverse {
+            background-color: rgb(34, 34, 34);
+            height: 60px;
+            border-color: rgb(8, 8, 8);
+        }
+         #Notes {
+            overflow: auto;
+            vertical-align: top;
+                width: 82%;
+    height: 60px;
+        }
+         .dd-click select{
+    pointer-events:none;
+}
+    </style>
+    
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("TransCanada", "Index", "Client", new { area = "" }, new { @class = "navbar-brand" })*@
+                @*<img src="/images/Logo_WorkPlace.png" alt="WorkPlace Safety Screenings" />*@
+
+
+                <img style="display:block;width:80px;height:60px" src="/images/drugtestlogo.png" alt="Drug Test" />
+
+
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_MenuPartial")
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <br />
+    @Html.Raw(MvcBreadCrumbs.BreadCrumb.Display())
+	 @if (@Session["Account_idPK"] != null)
+        {
+        <div style="float:right" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/Dashboard/Index">Home</a>|
+                <a class="nav-item nav-link" href="/ClientLab/ClientLabSP/@Session["Account_idPK"]">Assign Lab&SP</a>|
+                <a class="nav-item nav-link" href="/Location/Locations/@Session["Account_id"]">Locations and Contacts</a>
+                
+            </div>
+        </div>
+        }
+    <div class="container body-content">
+        <div class="f-right-left">
+            <h2>New Event</h2>
+            @Html.ActionLink("Back to List", "EventList")
+        </div>
+
+        @using (Html.BeginForm("NewEvent", "Event", FormMethod.Post,
+                                     new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.Event_id, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Event_id, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Event_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@<div class="form-group">
+                    <div class="col-md-10">
+                    </div>
+                </div><div class="form-group">
+                    <div class="col-md-10">
+                    </div>
+                </div><div class="form-group">
+                    <div class="col-md-10">
+                    </div>
+                </div><div class="form-group">
+                    <div class="col-md-10">
+                    </div>
+                </div>
+
+
+
+
+                      <ul class="nav nav-tabs">
+                          <li><a data-toggle="tab" href="#home">Client Details</a></li>
+                          <li><a data-toggle="tab" href="#menu1">Event Date and Time</a></li>
+                          <li><a data-toggle="tab" href="#menu3">Service Details</a></li>
+                          <li class="active"><a data-toggle="tab" href="#menu2">Lab details</a></li>
+                          <li><a data-toggle="tab" href="#menu_sp">Service Provider</a></li>
+                          <li><a data-toggle="tab" href="#menu4">Billing and Status</a></li>
+                      </ul>
+
+                <div class="tab-content">
+
+                    <div id="home" class="tab-pane tab_space_border fade in active">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Event Type</label>
+                                    <div class="col-md-6">
+                                        @Html.DropDownListFor(model => model.Event_type, TransCanada.Controllers.StaticValuesController.ListEventType(), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Client_id, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Client_id, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-6">
+                                        @Html.EditorFor(model => model.Client_id, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        @Html.ValidationMessageFor(model => model.Client_id, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Client_Location, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-6">
+                                        @Html.DropDownListFor(model => model.Client_Location, TransCanada.Controllers.EventController.ListLocationName(), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Client_Location, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Client_Contact, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-6">
+                                        @Html.DropDownListFor(model => model.Client_Contact, TransCanada.Controllers.EventController.ListContactName(Model.Client_Location), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Client_Contact, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div id="tpa-content">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">TPA</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownListFor(model => model.Tpa_Client, TransCanada.Controllers.StaticValuesController.getTpa(), "--SELECT--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Tpa_Client, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">TPA Location</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownListFor(model => model.Tpa_Client_location, TransCanada.Controllers.StaticValuesController.getTpaLocation(Model.Tpa_Client.ToString().Trim()), "--SELECT--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Tpa_Client_location, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">TPA Contact</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownListFor(model => model.Tpa_Client_Contact, TransCanada.Controllers.StaticValuesController.getTpaLocation(Model.Tpa_Client_location.ToString().Trim()), "--SELECT--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Tpa_Client_location, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                <button type="button" id="btnnext1" class="btn btn-success btnNext">Save&Continue</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div id="menu1" class="tab-pane tab_space_border fade">
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Event_name, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Event_name, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Event_name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Event_Start_Date, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.Event_Start_Date, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Event_Start_Date, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Event_End_Date, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.Event_End_Date, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Event_End_Date, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Event_Start_Time, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.Event_Start_Time, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Event_Start_Time, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Event_End_Time, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.Event_End_Time, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Event_End_Time, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            @*<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Document_Upload, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.Document_Upload, new { htmlAttributes = new { @type = "file", @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Document_Upload, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>*@
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Notes, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.TextAreaFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+                                        <i class="fa fa-eye eye-icon" id="notesonbilling" aria-hidden="true"></i>
+                                        @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+                                    </div>
+                                    @Html.Partial("popup")
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                <button type="button" id="btnnext2" class="btn btn-success btnNext">Save&Continue</button>
+                                <button type="button" class="btn btn-primary btnPrevious">previous</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="menu2" class="tab-pane tab_space_border fade">
+                        <div class="row">
+
+                            @*<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Service_Prov_Type, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownListFor(model => model.Service_Prov_Type, TransCanada.Controllers.EventController.ListEventType(), "--SELECT--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Service_Prov_Type, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>*@
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Service_Location, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(model => model.Service_Location, TransCanada.Controllers.EventController.ListServicelocation(), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Service_Location, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label id="lbl_lab_name" class="control-label col-md-4">Lab/Manufacturer Name</label>
+                                    @*@Html.LabelFor(model => model.Service_Prov_Id, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                                    <div class="col-md-8">
+                                        <div class="dd-click">
+                                            @*@Html.EditorFor(model => model.Service_Prov_Id, new { htmlAttributes = new { @class = "form-control" } })*@
+                                            @Html.DropDownListFor(model => model.Lab_Name, TransCanada.Controllers.EventController.GetName("Lab"), "--SELECT--", new { @class = "form-control", @readonly = "readonly" })
+                                            @Html.ValidationMessageFor(model => model.Lab_Name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @*@Html.LabelFor(model => model.Service_Prov_Location, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                                    <label id="lbl_lab_Location" class="control-label col-md-4">Lab/Manufacturer Location</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(model => model.Lab_Locations, TransCanada.Controllers.EventController.GetLocation("Lab", Model.Lab_Name.ToString()), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Lab_Locations, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @*@Html.LabelFor(model => model.Service_Prov_Contact, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                                    <label id="lbl_lab_Location" class="control-label col-md-4">Lab/Manufacturer Contact</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(model => model.Lab_Contacts, TransCanada.Controllers.EventController.GetContact("Lab", Model.Lab_Locations), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Lab_Contacts, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="button" id="btnnext3" class="btn btn-success btnNext">Save&Continue</button>
+                                <button type="button" class="btn btn-primary btnPrevious">previous</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div id="menu3" class="tab-pane tab_space_border fade">
+                        <div class="row">
+
+
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+
+                                    <label class="control-label col-md-4">Product & Services</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(m => m.Servicegroup, Model.Servicelist,"--SELECT--", new { @class = "form-control" })
+                                        @*@Html.DropDownListFor(model => model.Servicegroup, Model.Servicelist, "--SELECT--", new { @class = "form-control" })*@
+
+                                        @Html.ValidationMessageFor(model => model.Servicegroup, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">Panels</label>
+
+                                    <div class="col-md-8">
+                                        @Html.ListBoxFor(m => m.subServices, Model.subServiceslist, new { @class = "listbox" })
+                                        @Html.ValidationMessageFor(model => model.subService, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="button" id="btnnext4" class="btn btn-success btnNext">Save&Continue</button>
+                                <button type="button" class="btn btn-primary btnPrevious">previous</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu_sp" class="tab-pane tab_space_border fade">
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label id="lbl_lab_name" class="control-label col-md-4">Service Provider Name</label>
+                                    @*@Html.LabelFor(model => model.Service_Prov_Id, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                                    <div class="col-md-8">
+                                        @*@Html.EditorFor(model => model.Service_Prov_Id, new { htmlAttributes = new { @class = "form-control" } })*@
+                                        @Html.DropDownListFor(model => model.Service_Prov_Id, TransCanada.Controllers.EventController.GetName(Model.Service_Location), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Service_Prov_Id, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @*@Html.LabelFor(model => model.Service_Prov_Location, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                                    <label id="lbl_lab_Location" class="control-label col-md-4">Service Provider Location</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(model => model.Service_Prov_Location, TransCanada.Controllers.EventController.GetLocation(Model.Service_Location, Model.Service_Prov_Id.ToString()), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Service_Prov_Location, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @*@Html.LabelFor(model => model.Service_Prov_Contact, htmlAttributes: new { @class = "control-label col-md-4" })*@
+                                    <label id="lbl_lab_Location" class="control-label col-md-4">Service Provider Contact</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(model => model.Service_Prov_Contact, TransCanada.Controllers.EventController.GetContact(Model.Service_Location, Model.Service_Prov_Location), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Service_Prov_Contact, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="button" id="btnnext5" class="btn btn-success btnNext">Save&Continue</button>
+                                <button type="button" class="btn btn-primary btnPrevious">previous</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div id="menu4" class="tab-pane tab_space_border fade">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="display:none">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Billing_price, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.Billing_price, new { htmlAttributes = new { @class = "form-control" } })
+
+                                        @Html.ValidationMessageFor(model => model.Billing_price, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Event_Status, htmlAttributes: new { @class = "control-label col-md-4" })
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(model => model.Event_Status, TransCanada.Controllers.EventController.ListEventStatus(), "--SELECT--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Event_Status, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                           
+                            <div style="width:70%;margin-left:70px;">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                    <div>
+                                        
+                                        <br />
+                                        <table id="tbl" class="table">
+
+                                            <tr>
+                                                <th>Panel</th>
+                                                <th>Purchase Cost</th>
+                                                <th>Lab cost</th>
+                                                <th>MRO</th>
+                                                <th>Document</th>
+                                                <th>Vendor</th>
+                                                <th>Billing Price</th>
+                                                <th>Collection Cost</th>
+                                            </tr>
+                                            @foreach (var item in Model.List_price)
+                                            {
+                                        <tr>
+                                            <td>
+                                                @item.lab_services_description
+                                            </td>
+                                            <td>
+                                                @item.client_billing_charges
+                                            </td>
+                                            <td>
+                                                @item.service_charges
+                                            </td>
+
+                                            <td>
+                                                @item.Medical_Review_Office_Cost
+                                            </td>
+
+                                            <td>
+                                                @item.Document_Upload
+                                            </td>
+                                            <td>
+                                                @item.Vendor_management
+                                            </td>
+
+                                            <td>
+                                                @item.Billing_Price
+                                            </td>
+                                            <td>
+                                                @item.Collection_Cost
+                                            </td>
+
+                                        </tr>
+                                            }
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <input type="submit" value="Submit" class="btn btn-success fright" />
+                                        <button type="button" class="btn btn-primary" id="btn_prev">previous</button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.Lab_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Lab_Id, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Lab_Id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@<div class="form-group">
+                    <div class="col-md-10">
+                    </div>
+                </div><div class="form-group">
+                    <div class="col-md-10">
+                    </div>
+                </div><div class="form-group">
+                    <div class="col-md-10">
+                    </div>
+                </div><div class="form-group">
+                    <div class="col-md-10">
+                    </div>
+                </div>
+
+
+            </div>
+        }
+
+        @Html.ActionLink("Back to List", "EventList")
+
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Drug Test</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+@*<script src="~/Scripts/jquery-3.3.1.js"></script>*@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="~/Scripts/popup.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<link href="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+
+    $(function () {
+        $('.listbox').multiselect({
+            includeSelectAllOption: true
+
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+
+        @*var valArr = new Array();
+         var substring = '@ViewBag.CC';
+        var substr= substring.split(',');
+        var i;
+        for (i = 0; i < substr.length; ++i) {
+           valArr.push(substr[i].trim())
+        }
+        i = 0, size = valArr.length;
+        for (i; i < size; i++) {
+
+            $("#Servicegroups option[value='" + valArr[i] + "']").attr("selected", 1);
+            $("#Servicegroups").multiselect('refresh');
+        }
+        $("#Servicegroups").multiselect('rebuild');*@
+        var valArr1 = new Array();
+         var substring1 = '@ViewBag.cc1';
+        var substr1= substring1.split(',');
+        var i;
+        for (i = 0; i < substr1.length; ++i) {
+           valArr1.push(substr1[i].trim())
+        }
+        i = 0, size1 = valArr1.length;
+        for (i; i < size1; i++) {
+            $("#subServices option[value='" + valArr1[i] + "']").attr("selected", 1);
+            $("#subServices").multiselect('refresh');
+        }
+        $("#subServices").multiselect('rebuild');
+});
+
+
+</script>
+<script>
+
+    $('.btnNext').click(function () {
+        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+
+    });
+
+    $('.btnPrevious').click(function () {
+        $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+    });
+
+
+    $(document).ready(function () {
+        
+            
+            var [before, after] = $("#Servicegroup option:selected").text().split("-");
+            $("#Lab_Name").val(before);
+            var Loc_id = "Lab";
+            var sp_type = $("#Lab_Name").val();
+            $.ajax({
+                data: { 'Type': Loc_id, 'Name': sp_type },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetLocations',
+                success: function (result) {
+                    $("#Lab_Locations").empty();
+                    $("#Lab_Locations").append('<option value="">Select Location</option>');
+                    $.each(result, function (i, item) {
+                        $("#Lab_Locations").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+         if ($("#Service_Location").val() == "Lab") {
+                $('.nav li.active').next('li').addClass('disabled');
+                $('.nav li.active').next('li').find('a').removeAttr("data-toggle");
+
+
+            }
+            else {
+                $('.nav li.active').next('li').removeClass('disabled');
+                $('.nav li.active').next('li').find('a').attr("data-toggle", "tab")
+        }
+        $('.nav-tabs a[href="#home"]').tab('show');
+        if ($("#Client_Contact option:selected").text() == "--SELECT--" || $("#Client_Contact option:selected").text() == "Select Contact") {
+            $("#btnnext1").attr("disabled", true);
+        }
+        $("#Client_Contact").change(function () {
+
+            if ($("#Client_Contact option:selected").text() == "--SELECT--" || $("#Client_Contact option:selected").text() == "Select Contact") {
+                $("#btnnext1").attr("disabled", true);
+            }
+            else {
+                $("#btnnext1").attr("disabled", false);
+            }
+        });
+        $("#Client_Location").change(function () {
+
+            $("#btnnext1").attr("disabled", true);
+            var Loc_id = $("#Client_Location").val();
+            $.ajax({
+                data: { 'id': Loc_id },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/ListContactsName',
+                success: function (result) {
+                    $("#Client_Contact").empty();
+                    document.getElementById("Client_Contact").disabled = false;
+                    $("#Client_Contact").append('<option value="">Select Contact</option>');
+                    $.each(result, function (i, item) {
+                        $("#Client_Contact").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+
+
+        });
+        $("#Service_Location").change(function () {
+            //$("#Lab_Name").val($("#Lab_Name option:first").val());
+            $("#Service_Prov_Id").val($("#Service_Prov_Id option:first").val());
+            //$("#Servicegroups").empty();
+            //$("#Servicegroups").multiselect('rebuild');
+            //$("#subServices").empty();
+            //$("#subServices").multiselect('rebuild');
+            var Loc_id = $("#Service_Location").val();
+
+
+            $.ajax({
+                data: { 'Type': Loc_id },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetNames',
+                success: function (result) {
+                    $("#Service_Prov_Id").empty();
+                    document.getElementById("Service_Prov_Id").disabled = false;
+                    $("#Service_Prov_Id").append('<option value="0">Select</option>');
+                    $.each(result, function (i, item) {
+                        $("#Service_Prov_Id").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+            if ($("#Service_Location").val() == "Lab") {
+                $('.nav li.active').next('li').addClass('disabled');
+                $('.nav li.active').next('li').find('a').removeAttr("data-toggle");
+
+
+            }
+            else {
+                $('.nav li.active').next('li').removeClass('disabled');
+                $('.nav li.active').next('li').find('a').attr("data-toggle", "tab")
+            }
+        });
+        //$("#Lab_Name").change(function () {
+
+        //    var Loc_id = "Lab";
+        //    var sp_type = $("#Lab_Name").val();
+        //    $.ajax({
+        //        data: { 'Type': Loc_id, 'Name': sp_type },
+        //        type: 'POST',
+        //        dataType: 'json',
+        //        url: '/Event/GetLocations',
+        //        success: function (result) {
+        //            $("#Lab_Locations").empty();
+        //            $("#Lab_Locations").append('<option value="">Select Location</option>');
+        //            $.each(result, function (i, item) {
+        //                $("#Lab_Locations").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+        //            });
+
+        //        },
+        //        error: function (ex) {
+        //            alert('We face some technical difficulties');
+        //        }
+        //    });
+            
+            
+
+        //        //$.ajax({
+        //        //    data: { 'Type': Loc_id, 'Name': sp_type },
+        //        //    type: 'POST',
+        //        //    dataType: 'json',
+        //        //    url: '/Event/jsonGetServices',
+        //        //    success: function (result) {
+        //        //        console.log(result)
+        //        //        $("#Servicegroups").empty();
+        //        //        $.each(result, function (i, item) {
+        //        //            $("#Servicegroups").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+        //        //            $("#Servicegroups").multiselect('rebuild');
+        //        //        });
+        //        //        $("#Servicegroups").multiselect('rebuild');
+        //        //    },
+        //        //    error: function (ex) {
+        //        //        alert('We face some technical difficulties');
+        //        //    }
+        //        //});
+          
+
+        //});
+        $("#Service_Prov_Id").change(function () {
+
+            var Loc_id = $("#Service_Location").val();
+            var sp_type = $("#Service_Prov_Id").val();
+            //$("#Servicegroups").empty();
+            //$("#Servicegroups").multiselect('rebuild');
+            //$("#subServices").empty();
+            //$("#subServices").multiselect('rebuild');
+
+            $.ajax({
+                data: { 'Type': Loc_id, 'Name': sp_type },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetLocations',
+                success: function (result) {
+                    $("#Service_Prov_Location").empty();
+                    document.getElementById("Service_Prov_Location").disabled = false;
+                    $("#Service_Prov_Location").append('<option value="">Select Location</option>');
+                    $.each(result, function (i, item) {
+                        $("#Service_Prov_Location").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+
+            //$.ajax({
+            //    data: { 'Type': Loc_id, 'Name': sp_type },
+            //    type: 'POST',
+            //    dataType: 'json',
+            //    url: '/Event/jsonGetServices',
+            //    success: function (result) {
+            //        $("#Servicegroups").empty();
+            //        $.each(result, function (i, item) {
+            //            $("#Servicegroups").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+            //            $("#Servicegroups").multiselect('rebuild');
+            //        });
+
+            //    },
+            //    error: function (ex) {
+            //        alert('We face some technical difficulties');
+            //    }
+            //});
+        });
+        $("#Lab_Locations").change(function () {
+
+            var Loc_id = "Lab";
+            var sp_loc = $("#Lab_Locations").val();
+
+            $.ajax({
+                data: { 'Type': Loc_id, 'Location': sp_loc },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetContacts',
+                success: function (result) {
+                    console.log(result)
+                    $("#Lab_Contacts").empty();
+
+                    $("#Lab_Contacts").append('<option value="">Select Contact</option>');
+                    $.each(result, function (i, item) {
+                        $("#Lab_Contacts").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+
+
+        });
+        $("#Service_Prov_Location").change(function () {
+
+            var Loc_id = $("#Service_Location").val();
+            var sp_loc = $("#Service_Prov_Location").val();
+
+            $.ajax({
+                data: { 'Type': Loc_id, 'Location': sp_loc },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetContacts',
+                success: function (result) {
+                    $("#Service_Prov_Contact").empty();
+                    document.getElementById("Service_Prov_Contact").disabled = false;
+                    $("#Service_Prov_Contact").append('<option value="">Select Contact</option>');
+                    $.each(result, function (i, item) {
+                        $("#Service_Prov_Contact").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+
+
+        });
+        $("#Tpa_Client").change(function () {
+
+            var Loc_id = $("#Tpa_Client").val();
+            $.ajax({
+                data: { 'id': Loc_id },
+                type: 'POST',
+                dataType: 'json',
+                url: '/StaticValues/jsongetTpaLocation',
+                success: function (result) {
+                    $("#Tpa_Client_location").empty();
+
+                    $("#Tpa_Client_location").append('<option value="">Select Location</option>');
+                    $.each(result, function (i, item) {
+                        $("#Tpa_Client_location").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+        });
+        $("#Tpa_Client_location").change(function () {
+
+            var Loc_id = $("#Tpa_Client_location").val();
+            $.ajax({
+                data: { 'id': Loc_id },
+                type: 'POST',
+                dataType: 'json',
+                url: '/StaticValues/josngetTpaLocationContact',
+                success: function (result) {
+                    $("#Tpa_Client_Contact").empty();
+
+                    $("#Tpa_Client_Contact").append('<option value="">Select Contact</option>');
+                    $.each(result, function (i, item) {
+                        $("#Tpa_Client_Contact").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+        });
+        
+        $('#Servicegroup').parent().find('ul').attr('style', 'display:block;');
+        var select = $("#Servicegroup");
+        select.change(function (e) {
+            var result = $('#Servicegroup').val();
+            var [before, after] = $("#Servicegroup option:selected").text().split("-");
+            $("#Lab_Name").val(before);
+            var Loc_id = "Lab";
+            var sp_type = $("#Lab_Name").val();
+            $.ajax({
+                data: { 'Type': Loc_id, 'Name': sp_type },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetLocations',
+                success: function (result) {
+                    $("#Lab_Locations").empty();
+                    $("#Lab_Locations").append('<option value="">Select Location</option>');
+                    $.each(result, function (i, item) {
+                        $("#Lab_Locations").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+            // var options = select.children("option:selected");
+            //$.each(options, function (i, el) {
+            //    result += $(el).val();
+            //    if (i < options.length - 1) {
+            //        result += ", ";
+            //    }
+            //});
+            var Loc_id = $("#Service_Location").val();
+            $.ajax({
+                data: { 'Type': Loc_id, 'id': result },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/JsonGetSubServices',
+                success: function (result) {
+                    var foo = $("#subServices").val();
+                    $("#subServices").empty();
+                    $.each(result, function (i, item) {
+                        $("#subServices").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                        $("#subServices").multiselect('rebuild');
+                    });
+                     $("#subServices").multiselect('rebuild');
+                    $("#subServices option").each(function () {
+                        $("#subServices").val(foo);
+
+                        $("#subServices").multiselect("refresh");
+                    });
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+        });
+        $("#subServices").change(function (e) {
+            var select = $("#subServices");
+            var result="";
+            var options = select.children("option:selected");
+            $.each(options, function (i, el) {
+                result += $(el).val();
+                if (i < options.length - 1) {
+                    result += ", ";
+                }
+            });
+            $.ajax({
+                data: {'id': result },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/JsonGetSubServicePrice',
+                success: function (result) {
+                     $("#tbl").find("tr:gt(0)").remove();
+                    $.each(result, function (index) {
+                       
+            $('#tbl tr:last').after('<tr><td>'+result[index].lab_services_description+'</td><td>'+result[index].service_charges+'</td><td>'+result[index].client_billing_charges+'</td><td>'+result[index].Medical_Review_Office_Cost+'</td><td>'+result[index].Document_Upload+'</td><td>'+result[index].Vendor_management+'</td><td>'+result[index].Billing_Price+'</td><td>'+result[index].Collection_Cost+'</td></tr>')
+        });
+                   
+ 
+                    $("#Billing_price").val(result)
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+        });
+        //var random_checked = $("input[type=checkbox]").get().sort(function () {
+        //    return Math.round(Math.random()) - 0.6; //so we get the right +/- combo
+        //}).slice(0, 100);
+        //$(random_checked).prop('checked', true);
+        $('#subServices').parent().find('ul').attr('style', 'display:block;');
+        var checked = [];
+        $('input[type=checkbox]').change(function (e) {
+            var num_checked = $("input[type=checkbox]:checked").length;
+            if (num_checked > 3) {
+                //checked[checked.length - 1].prop('checked', false);
+                //checked.pop();
+            }
+            if ($.inArray($(this), checked) < 0) {
+                checked.push($(this));
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        if ($("#Event_type").val() == 2) {
+            $("#tpa-content").show();
+        }
+        else {
+            $("#tpa-content").hide();
+        }
+        $("#Event_type").change(function () {
+
+
+            if ($("#Event_type").val() == 2) {
+                $("#tpa-content").show();
+            }
+            else {
+                $("#tpa-content").hide();
+            }
+        });
+        //$('.nav li').not('.active').addClass('disabled');
+        //$('.nav li').not('.active').find('a').removeAttr("data-toggle");
+        $("#Service_Prov_Id").change(function () {
+            if (this.val === "") {
+                $("#btnnext1").attr("disabled", true);
+                //...
+            }
+        });
+        $("#btnnext1").click(function () {
+            //$('.nav li.active').next('li').removeClass('disabled');
+            //$('.nav li.active').next('li').find('a').attr("data-toggle", "tab");
+            var Client_id1 = $("#Client_id").val();
+            var Client_Contact1 = $("#Client_Contact").val();
+            var Client_Location1 = $("#Client_Location").val();
+            var Event_type = $("#Event_type").val();
+            var Tpa_Client = $("#Tpa_Client").val();
+            var Tpa_Client_location = $("#Tpa_Client_location").val();
+            var Tpa_Client_Contact = $("#Tpa_Client_Contact").val();
+            var model = {
+                Client_id: Client_id1,
+                Client_Contact: Client_Contact1,
+                Client_Location: Client_Location1,
+                Event_type: Event_type,
+                Tpa_Client: Tpa_Client,
+                Tpa_Client_location: Tpa_Client_location,
+                Tpa_Client_Contact:Tpa_Client_Contact
+            };
+
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(model),
+                url: "/Event/AddEvent",
+                contentType: "application/json"
+            }).done(function (res) {
+            });
+        });
+        $("#btnnext2").click(function () {
+            //$('.nav li.active').next('li').find('a').attr("data-toggle", "tab");
+            var Client_id = $("#Client_id").val();
+            var Event_name = $("#Event_name").val();
+            var Event_Start_Date = $("#Event_Start_Date").val();
+            var Event_End_Date = $("#Event_End_Date").val();
+            var Event_Start_Time = $("#Event_Start_Time").val();
+            var Event_End_Time = $("#Event_End_Time").val();
+            var Notes = $("#Notes").val();
+            var event_Model = {
+                Event_name: Event_name,
+                Event_Start_Date: Event_Start_Date,
+                Event_End_Date: Event_End_Date,
+                Event_Start_Time: Event_Start_Time,
+                Event_End_Time: Event_End_Time,
+                Notes: Notes,
+                Client_id: Client_id
+            };
+
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(event_Model),
+                url: "/Event/AddEvent1",
+                contentType: "application/json"
+            }).done(function (res) {
+            });
+        });
+        $("#btnnext3").click(function () {
+             if ($("#Service_Location").val() == "Lab") {
+                $('.nav-tabs a[href="#menu4"]').tab('show');
+            }
+            else {
+                $('.nav-tabs a[href="#menu_sp"]').tab('show');
+            }
+            var Client_id = $("#Client_id").val();
+            var Service_Prov_Type = $("#Service_Prov_Type").val();
+            var Lab_Name = $("#Lab_Name").val();
+            var Lab_Contacts = $("#Lab_Contacts").val();
+            var Lab_Locations = $("#Lab_Locations").val();
+            var Service_Location = $("#Service_Location").val();
+            var event_Model = {
+                Service_Prov_Type: Service_Prov_Type,
+                Lab_Name: Lab_Name,
+                Lab_Contacts: Lab_Contacts,
+                Lab_Locations: Lab_Locations,
+                Service_Location:Service_Location,
+                Client_id: Client_id
+            };
+
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(event_Model),
+                url: "/Event/AddEvent4",
+                contentType: "application/json"
+            }).done(function (res) {
+            });
+        });
+        $("#btnnext5").click(function () {
+            //$('.nav li.active').next('li').find('a').attr("data-toggle", "tab");
+           
+             var Client_id = $("#Client_id").val();
+            var Service_Prov_Type = $("#Service_Location").val();
+            var Service_Prov_Id = $("#Service_Prov_Id").val();
+            var Service_Prov_Contact = $("#Service_Prov_Contact").val();
+            var Service_Location = $("#Service_Location").val();
+            var Service_Prov_Location= $("#Service_Prov_Location").val();
+             var event_Model = {
+                Service_Prov_Type: Service_Prov_Type,
+                Service_Prov_Id: Service_Prov_Id,
+                Service_Prov_Contact: Service_Prov_Contact,
+                Service_Prov_Location: Service_Prov_Location,
+                Service_Location: Service_Location,
+                Client_id: Client_id
+            };
+
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(event_Model),
+                url: "/Event/AddEvent2",
+                contentType: "application/json"
+            }).done(function (res) {
+            });
+        });
+        $("#btnnext4").click(function () {
+            //$('.nav li.active').next('li').find('a').attr("data-toggle", "tab");
+            var Client_id = $("#Client_id").val();
+            //var select = $("#Servicegroups");
+            //var result = "";
+            //var options = select.children("option:selected");
+            //$.each(options, function (i, el) {
+            //    result += $(el).val();
+            //    if (i < options.length - 1) {
+            //        result += ", ";
+            //    }
+            //});
+            var Servicegroups = $("#Servicegroup").val();
+            var select1 = $("#subServices");
+            var result1 = "";
+            var options1 = select1.children("option:selected");
+            $.each(options1, function (i, el) {
+                result1 += $(el).val();
+                if (i < options1.length - 1) {
+                    result1 += ", ";
+                }
+            });
+            var subServices = result1;
+            var event_Model = {
+                Servicegroups: Servicegroups,
+                subServices: subServices,
+                Client_id: Client_id
+            };
+
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(event_Model),
+                url: "/Event/AddEvent3",
+                contentType: "application/json"
+            }).done(function (res) {
+            });
+        });
+        $("#btn_prev").click(function () {
+            //$('.nav li.active').next('li').find('a').attr("data-toggle", "tab");
+            if ($("#Service_Location").val() == "Lab") {
+                $('.nav-tabs a[href="#menu2"]').tab('show');
+            }
+            else {
+                $('.nav-tabs a[href="#menu_sp"]').tab('show');
+            }
+        });
+    });
+</script>
+<style>
+
+    .tab_space_border {
+        padding: 20px;
+        margin: 0px;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        display: table;
+        width: 100%;
+    }
+
+        .tab_space_border button {
+            float: right;
+            margin: 0px 0px 0px 15px;
+        }
+
+    .f-right-left {
+        padding: 0px 0px 10px;
+        margin: 30px 0px;
+        display: table;
+        width: 100%;
+        border-bottom: 1px solid #e4e4e4;
+    }
+
+        .f-right-left h2 {
+            padding: 11px 0px 0px;
+            margin: 0px;
+            float: left;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #5d5d5d;
+        }
+
+        .f-right-left a {
+            padding: 8px 10px;
+            margin: 0px;
+            float: right;
+            background: #337ab7;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+    .fright {
+        float: right;
+        margin: 0px 0px 0px 15px;
+    }
+</style>

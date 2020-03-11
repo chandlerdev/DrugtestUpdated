@@ -1,0 +1,48 @@
+﻿@model TransCanada.Models.Role
+
+
+@{
+    ViewBag.Title = "Screens";
+}
+
+<h2>Screens</h2>
+<div style="float:right">
+    @Html.ActionLink("Back to List", "Roles")
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4></h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="form-group">
+    @*@Html.LabelFor(model => model.Accounts_Id, htmlAttributes: new { @class = "control-label col-md-2" })*@
+    @Html.HiddenFor(model => model.RoleName)
+    <b class="control-label col-md-2">@Html.DisplayName("Screens")</b>
+    <div class="col-md-10">
+        @for (int i = 0; i < Model.Screesns.Count; i++)
+        {
+
+            @Html.CheckBoxFor(m => Model.Screesns[i].IsChecked)
+            @Model.Screesns[i].Value
+            @Html.HiddenFor(m => Model.Screesns[i].Value)
+            @Html.HiddenFor(m => Model.Screesns[i].Value)<br />
+
+        }
+    </div>
+</div>
+
+    
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Roles")
+</div>

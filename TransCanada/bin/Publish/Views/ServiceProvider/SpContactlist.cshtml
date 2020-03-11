@@ -1,0 +1,84 @@
+﻿@model IEnumerable<TransCanada.Models.Lab_contact>
+
+@{
+    ViewBag.Title = "SpContactlist";
+}
+
+<h2>SpContactlist</h2>
+
+<p>
+    @Html.ActionLink("Create New", "SpContactinsert", new { id = ViewBag.LocationId })
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.contact_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.location_id)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cell)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.officephone)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Sp_location_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sp_contact_id)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.contact_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location_id)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.officephone)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Sp_location_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sp_contact_id)
+                </td>*@
+            <td>
+                @Html.ActionLink("Edit", "UpdateSpContact", new { id = item.Sp_contact_id }) |
+                @Html.ActionLink("Delete", "deleteSp", new { id = item.Sp_contact_id })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<br />
+@Html.ActionLink("Back to Location", "SpLocations", new { id = ViewBag.LabName })

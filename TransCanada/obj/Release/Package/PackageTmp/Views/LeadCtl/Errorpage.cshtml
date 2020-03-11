@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Errorpage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+    <style>
+        marquee {
+            font-size: 30px;
+            font-weight: 800;
+            color: brown;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-image: url('../../Images/human_error_stop_400.png');
+            /*background-repeat: no-repeat, repeat;*/
+            /*background-size: 150px; height:50px; width:50px;*/
+            /*background-image: url('../../Images/Wordpress-Bugs.jpg');*/
+        }
+    </style>
+</head>
+&nbsp;
+&nbsp;&nbsp;&nbsp;
+<body>
+    <h2><font color="red">Sorry !</font></h2>
+
+    <marquee direction="scroll">There is some error occured while Processing your request...! </marquee>
+
+</body>
+</html>
+<div>
+    @Html.ActionLink("Go To Home", "Leadlist")
+</div>

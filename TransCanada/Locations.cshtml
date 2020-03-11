@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TransCanada.Models.Location>
+
+@{
+    ViewBag.Title = "Locations";
+}
+
+<h2>Locations</h2>
+
+<p>
+    @Html.ActionLink("Create New", "NewLocation")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Location_Name)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Location_Contact_Person)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Address_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        
+      
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location_Name)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Location_Contact_Person)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Address_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        
+      
+        
+        <td>
+            @Html.ActionLink("Edit", "UpdateLocations", new { id = item.Location_id })
+            @Html.ActionLink("Delete", "DeleteLocation", new { id = item.Location_id })
+            @Html.ActionLink("Contact", "LocContactList", new { id = item.Location_id })
+        </td>
+    </tr>
+}
+
+</table>

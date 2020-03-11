@@ -1,0 +1,467 @@
+﻿@model TransCanada.Models.Event_Model
+
+@{
+    ViewBag.Title = "NewEvent";
+}
+
+
+
+<div class="f-right-left">
+    <h2>New Event</h2>
+    @Html.ActionLink("Back to List", "EventList")
+</div>
+
+@using (Html.BeginForm("NewEvent", "Event", FormMethod.Post,
+                             new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.Event_id, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Event_id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Event_id, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+
+
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Client Details</a></li>
+            <li><a data-toggle="tab" href="#menu1">Event date and location</a></li>
+            <li><a data-toggle="tab" href="#menu2">Thirdparty / Lab details</a></li>
+            <li><a data-toggle="tab" href="#menu3">Service Details</a></li>
+            <li><a data-toggle="tab" href="#menu4">Event Status</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div id="home" class="tab-pane tab_space_border fade in active">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Client_id, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-6">
+                                @Html.EditorFor(model => model.Client_id, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.Client_id, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Client_Location, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-6">
+                                @Html.DropDownListFor(model => model.Client_Location, TransCanada.Controllers.EventController.ListLocationName(), "--SELECT--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Client_Location, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Client_Contact, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-6">
+                                @Html.DropDownListFor(model => model.Client_Contact, TransCanada.Controllers.EventController.ListContactName(Model.Client_Location), "--SELECT--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Client_Contact, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <button type="button" class="btn btn-success btnNext">Next</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="menu1" class="tab-pane tab_space_border fade">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Event_name, htmlAttributes: new { @class = "control-label col-md-4" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Event_name, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Event_name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Event_Start_Date, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+
+                                            @Html.EditorFor(model => model.Event_Start_Date, new { htmlAttributes = new {  @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Event_Start_Date, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                         
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Event_End_Date, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Event_End_Date, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Event_End_Date, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Event_Start_Time, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Event_Start_Time, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Event_Start_Time, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                            
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Event_End_Time, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Event_End_Time, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Event_End_Time, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                          
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Document_Upload, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Document_Upload, new { htmlAttributes = new { @type = "file", @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Document_Upload, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Notes, htmlAttributes: new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Notes, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Notes, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <button type="button" class="btn btn-success btnNext">Next</button>
+                        <button type="button" class="btn btn-primary btnPrevious">previous</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="menu2" class="tab-pane tab_space_border fade">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Service_Prov_Type, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Service_Prov_Type, TransCanada.Controllers.EventController.ListEventType(), "--SELECT--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Service_Prov_Type, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Service_Location, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Service_Location, TransCanada.Controllers.EventController.ListServicelocation(), "--SELECT--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Service_Location, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button type="button" class="btn btn-success btnNext">Next</button>
+                        <button type="button" class="btn btn-primary btnPrevious">previous</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="menu3" class="tab-pane tab_space_border fade">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Service_Prov_Id, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @*@Html.EditorFor(model => model.Service_Prov_Id, new { htmlAttributes = new { @class = "form-control" } })*@
+                                @Html.DropDownListFor(model => model.Service_Prov_Id, TransCanada.Controllers.EventController.GetName(Model.Service_Location), "--SELECT--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Service_Prov_Id, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Service_Prov_Location, htmlAttributes: new { @class = "control-label col-md-4" })
+
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Service_Prov_Location, TransCanada.Controllers.EventController.GetLocation(Model.Service_Location, Model.Service_Prov_Id.ToString()), "--SELECT--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Service_Prov_Location, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Service_Prov_Contact, htmlAttributes: new { @class = "control-label col-md-4" })
+
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Service_Prov_Contact, TransCanada.Controllers.EventController.GetContact(Model.Service_Location, Model.Service_Prov_Location), "--SELECT--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Service_Prov_Contact, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button type="button" class="btn btn-success btnNext">Next</button>
+                        <button type="button" class="btn btn-primary btnPrevious">previous</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="menu4" class="tab-pane tab_space_border fade">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Event_Status, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.DropDownListFor(model => model.Event_Status, TransCanada.Controllers.EventController.ListEventStatus(), "--SELECT--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Event_Status, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="submit" value="Save" class="btn btn-success fright" />
+                        <button type="button" class="btn btn-primary btnPrevious">previous</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.Lab_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Lab_Id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Lab_Id, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+
+    </div>
+}
+
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+<link rel="stylesheet" href="~/Content/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script>
+
+    $('.btnNext').click(function () {
+        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+    });
+
+    $('.btnPrevious').click(function () {
+        $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+    });
+
+
+    $(document).ready(function () {
+ 
+
+        $("#Client_Location").change(function () {
+
+            var Loc_id = $("#Client_Location").val();
+            $.ajax({
+                data: { 'id': Loc_id },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/ListContactsName',
+                success: function (result) {
+                    $("#Client_Contact").empty();
+                    document.getElementById("Client_Contact").disabled = false;
+                    $("#Client_Contact").append('<option value="">Select Contact</option>');
+                    $.each(result, function (i, item) {
+                        $("#Client_Contact").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+
+
+        });
+        $("#Service_Location").change(function () {
+
+            var Loc_id = $("#Service_Location").val();
+            $.ajax({
+                data: { 'Type': Loc_id },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetNames',
+                success: function (result) {
+                    $("#Service_Prov_Id").empty();
+                    document.getElementById("Service_Prov_Id").disabled = false;
+                    $("#Service_Prov_Id").append('<option value="">Select</option>');
+                    $.each(result, function (i, item) {
+                        $("#Service_Prov_Id").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+        });
+        $("#Service_Prov_Id").change(function () {
+
+            var Loc_id = $("#Service_Location").val();
+            var sp_type = $("#Service_Prov_Id").val();
+            $.ajax({
+                data: { 'Type': Loc_id, 'Name': sp_type },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetLocations',
+                success: function (result) {
+                    $("#Service_Prov_Location").empty();
+                    document.getElementById("Service_Prov_Location").disabled = false;
+                    $("#Service_Prov_Location").append('<option value="">Select Location</option>');
+                    $.each(result, function (i, item) {
+                        $("#Service_Prov_Location").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+        });
+        $("#Service_Prov_Location").change(function () {
+
+            var Loc_id = $("#Service_Location").val();
+            var sp_loc = $("#Service_Prov_Location").val();
+            $.ajax({
+                data: { 'Type': Loc_id, 'Location': sp_loc },
+                type: 'POST',
+                dataType: 'json',
+                url: '/Event/GetContacts',
+                success: function (result) {
+                    $("#Service_Prov_Contact").empty();
+                    document.getElementById("Service_Prov_Contact").disabled = false;
+                    $("#Service_Prov_Contact").append('<option value="">Select Contact</option>');
+                    $.each(result, function (i, item) {
+                        $("#Service_Prov_Contact").append('<option value="' + item.Value + '">' + item.Text + '</option>');
+                    });
+
+                },
+                error: function (ex) {
+                    alert('We face some technical difficulties');
+                }
+            });
+        });
+    });
+</script>
+
+<style>
+
+    .tab_space_border {
+        padding: 20px;
+        margin: 0px;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        display: table;
+        width: 100%;
+    }
+
+        .tab_space_border button {
+            float: right;
+            margin: 0px 0px 0px 15px;
+        }
+
+    .f-right-left {
+        padding: 0px 0px 10px;
+        margin: 30px 0px;
+        display: table;
+        width: 100%;
+        border-bottom: 1px solid #e4e4e4;
+    }
+
+        .f-right-left h2 {
+            padding: 11px 0px 0px;
+            margin: 0px;
+            float: left;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #5d5d5d;
+        }
+
+        .f-right-left a {
+            padding: 8px 10px;
+            margin: 0px;
+            float: right;
+            background: #337ab7;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+    .fright {
+        float: right;
+        margin: 0px 0px 0px 15px;
+    }
+</style>

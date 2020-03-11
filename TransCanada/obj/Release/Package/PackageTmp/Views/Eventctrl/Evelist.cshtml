@@ -1,0 +1,64 @@
+﻿@model IEnumerable<TransCanada.Models.Events_mdl>
+
+@{
+    ViewBag.Title = "Evelist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Evelist</h2>
+
+<p>
+    @Html.ActionLink("Create New", "InsertEvents")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Eventid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eventbillingid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Main_service)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sub_services)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Billing_cost)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eventid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eventbillingid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Main_service)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sub_services)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Billing_cost)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "UpdateEvent", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,77 @@
+﻿@model TransCanada.Models.AspNetAccountsModel
+
+@{
+    ViewBag.Title = "DetailsAccounts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Accounts Details</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.AccountId_PK)
+        </dt>*@
+
+        @*<dd>
+            @Html.DisplayFor(model => model.AccountId_PK)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogoImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogoImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedDate)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "UpdateAccounts", new { id = Model.AccountId }) |
+    @Html.ActionLink("Back to List", "AccountsList")
+</p>

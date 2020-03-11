@@ -1,0 +1,71 @@
+﻿@model IEnumerable<TransCanada.Models.Lab_loc>
+
+@{
+    ViewBag.Title = "LabList";
+}
+
+    <h2>Lab/Manufacturer List</h2>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<p>
+        @Html.ActionLink("New Lab", "NewLab")
+    </p>
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Lab_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lab_Name)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lab_Name)
+                </td>
+                
+                <td>
+                    @Html.ActionLink("Location", "Locations", new { id = item.Lab_Name.Trim() }) |
+                    @Html.ActionLink("Product and Services", "LabServices", new { id = item.Lab_Name.Trim() })|
+                    @*@Html.ActionLink("Edit", "UpdateLab", new { id = item.Lab_Name }) |*@
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Lab_Name.Trim() }, new { onclick = "return confirm('Are you sure you want to delete this ?');" })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script> 
+
+<script>
+
+    $('#table').dataTable({
+    });
+</script>
+@*<script>
+    function deleletconfig() {
+
+        var del = confirm("Are you sure you want to delete this record?");
+        if (del == true) {
+            alert("record deleted")
+        } else {
+            alert("Record Not Deleted")
+        }
+        return del;
+    }
+</script>*@

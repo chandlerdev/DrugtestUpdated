@@ -1,0 +1,47 @@
+﻿@model IEnumerable<TransCanada.Models.AccountsModel>
+
+@{
+    ViewBag.Title = "Accounts List";
+}
+
+<h2>Accounts List</h2>
+
+@using (Html.BeginForm("List", "Accounts", FormMethod.Post))
+{
+    <span>Accounts Name:</span> @Html.TextBox("AccountsName")
+    <input type="submit" value="Search" />
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountName)
+            </td>
+            <td>
+                @Html.ActionLink("Clients", "Client_Redirect", new {  id=item.AccountId }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>

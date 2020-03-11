@@ -1,0 +1,85 @@
+﻿@model IEnumerable<TransCanada.Models.PriceModel>
+
+@{
+    ViewBag.Title = "Panels";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Panels</h2>
+
+<br />
+<table class="table">
+    <tr>
+        <th>
+                @Html.DisplayNameFor(model => model.lab_services_description)
+            </th>
+       
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Panel_id)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.lab_services_description)
+            </td>
+            <td>
+                @Html.HiddenFor(modelItme => item.id)
+                <a href="#" data-toggle="modal" data-target="#myModal" class="Edit"><strong>Assign Price</strong></a>
+
+            </td>
+        </tr>
+    }
+
+</table>
+<div id="showModal"></div>
+@section scripts{
+    <script>
+        function objectifyForm(formArray) {//serialize data function
+            var returnArray = {};
+            for (var i = 0; i < formArray.length; i++) {
+                returnArray[formArray[i]['name']] = formArray[i]['value'];
+            }
+            return returnArray;
+        }
+        $("body").on("click", "a[class='Edit']", function () {
+            $(this).prevAll("input[type='hidden']").val();
+            $.ajax({
+                url: '/PanelPrice/Price',
+                data: { id: $(this).prevAll("input[type='hidden']").val() }
+            }).done(function (msg) {
+                
+                $("#showModal").html(msg);
+                $("#myModal").modal();
+            })
+        })
+        $("body").on("click", ".close", function () {
+            
+            location.reload();
+        })
+        $("body").on("submit", "form", function () {
+            var myData = objectifyForm($('form').serializeArray());
+            $.ajax({
+            url: '@Url.Action("Price","PanelPrice")',
+            type: "Post",
+            data: { subServices: myData },
+            success: function (result) {
+                if (result.success) {
+                    $("#dialog-alert").html("Data has been updated succeessfully");
+                    location.reload();
+                }
+                
+                // else {
+                              
+                //    alert("Fail")
+                 
+                //}
+            }
+        });
+        return false;
+        })
+    </script>
+}

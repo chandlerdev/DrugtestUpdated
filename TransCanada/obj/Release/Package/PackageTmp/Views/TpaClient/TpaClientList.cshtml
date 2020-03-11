@@ -1,0 +1,67 @@
+﻿@model IEnumerable<TransCanada.Models.TPAClient>
+
+@{
+    ViewBag.Title = "TpaClientList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+<h2>Tpa Client List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateTPaClient")
+</p>
+<table class="table" id="Table">
+    <thead>
+        <tr>
+
+            @*<th>
+                @Html.DisplayNameFor(model => model.TPAClient_Id)
+            </th>*@
+
+            <th>
+                @Html.DisplayNameFor(model => model.TPA_Client)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.TPAClient_Id)
+                </td>*@
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TPA_Client)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "TpaClientEdit", new { id = item.TPAClient_Id }) |
+                    @Html.ActionLink("Locations", "TcLocationList", new { id = item.TPAClient_Id }) |
+                    @Html.ActionLink("Delete", "TpaClientdelete", new { id = item.TPAClient_Id }, new { onclick = "return confirm('Are you sure you want to delete this ?');" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+   
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+
+        $('#Table').dataTable({
+            responsive: true
+        });
+
+</script>
+

@@ -1,0 +1,170 @@
+﻿@model IEnumerable<TransCanada.Models.Event_Model>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "NewEvent")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Event_id)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Event_name)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Client_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client_Location)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Client_Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Start_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_End_Date)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Event_Start_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_End_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Document_Upload)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service_Prov_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service_Prov_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service_Prov_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service_Prov_Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lab_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_On)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Update_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Update_On)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_Deleted)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Event_id)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_name)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Client_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client_Location)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Client_Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Start_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_End_Date)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Event_Start_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_End_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Document_Upload)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service_Prov_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service_Prov_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service_Prov_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service_Prov_Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lab_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_On)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Update_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Update_On)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_Deleted)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "UpdateEvent", new { id=item.Id })
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

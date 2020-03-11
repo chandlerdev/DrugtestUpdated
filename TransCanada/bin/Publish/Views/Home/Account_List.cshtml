@@ -1,0 +1,48 @@
+﻿@model IEnumerable<TransCanada.Models.UserAccounts_Model>
+
+@{
+    ViewBag.Title = "Accounts For User";
+}
+
+<h2>Select Company</h2>
+
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.AccountId_PK)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>*@
+        <th>
+            @*@Html.DisplayNameFor(model => model.AccountId)*@
+            @Html.DisplayName("Company")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoImage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.AccountId_PK)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountId)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.LogoImage)*@
+            <img src="../../Images/@Url.Content(item.LogoImage)" width="100px" height="50px" alt="Testing" />
+        </td>
+        <td>
+            @Html.ActionLink("Select", "Index1", new {  Acc_id = item.AccountId_PK } )
+        </td>
+    </tr>
+}
+
+</table>

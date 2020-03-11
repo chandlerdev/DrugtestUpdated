@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TransCanada.Models.Services>
+
+@{
+    ViewBag.Title = "Services";
+}
+
+<h2>Services</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateServiceGroup", new { id = ViewBag.LabName })
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Service_id)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Service_Name)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Labid)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Service_Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "UpdateServiceGroup", new { id = item.Service_id }) |
+                @Html.ActionLink("Delete", "DeleteServiceGroup", new { id = item.Service_id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+@Html.ActionLink("Back to Service Provider", "ProviderList")

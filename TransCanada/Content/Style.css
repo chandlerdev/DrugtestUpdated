@@ -1,0 +1,150 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.newcall {
+    padding: 5px 7px;
+    margin: 10px 0px 0px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    float:right;
+}
+
+.lead-call {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.lead-table {
+    padding: 0px;
+    margin: 0px 0px 15px 0px;
+}
+
+.lead-modal .modal-dialog {
+    max-width: 750px;
+}
+.lead-modal-body {
+    min-height: 300px;
+    max-height: 520px;
+    overflow: auto;
+}
+.lead-textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+}
+.lead-table td {
+    border-top: none !important;
+    padding: 8px 15px !important;
+    margin: 0px;
+}
+.lead-table td p {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+.first-para {
+    padding: 0px;
+    margin: 0px;
+    width: 35%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #626262;
+}
+
+.table-bordered {
+    /*border: 1px solid #000;*/
+}
+
+.second-para {
+    padding: 0px;
+    margin: 0px;
+    width: 65%;
+    font-size: 16px;
+}
+
+.second-para-company {
+    padding: 0px;
+    margin: 0px;
+    width: 75%;
+    font-size: 16px;
+}
+
+.first-para-company {
+    padding: 0px;
+    margin: 0px;
+    width: 25%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #626262;
+}
+
+.lead-table-popup label {
+    padding: 0px;
+    margin: 0px 0px 5px 0px;
+    font-weight: 700;
+    color: #626262;
+    font-size: 16px;
+}
+
+#timer {
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+#stop {
+    background-color: #f40505;
+    outline: none;
+}
+
+#start {
+    background-color: #0b9e01;
+    outline: none;
+}
+
+.lead-call-btn button {
+    padding: 10px 30px;
+    color: #fff;
+    outline: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 5px 15px 0px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.lead-modal .close, .newcall {
+    outline: none;
+
+}
+.lead-modal .close {
+    outline: none;
+    position: absolute;
+    top: 10px;
+    color: #000;
+    right: 0px;
+    font-size: 21px;
+}
+@media (min-width:280px) and (max-width:399px) {
+    .second-para {
+        width: auto;
+    }
+
+    .first-para {
+        width: auto;
+    }
+
+    .lead-modal {
+        padding: 0px;
+    }
+}
+
+@media (min-width:678px) and (max-width:1199px) {
+}
