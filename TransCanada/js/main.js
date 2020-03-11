@@ -1,7 +1,7 @@
 
 (function ($) {
     "use strict";
-
+console.log("bala")
     /*==================================================================
     [ Focus Contact2 ]*/
     $('.input100').each(function(){
